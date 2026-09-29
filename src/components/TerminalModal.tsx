@@ -192,8 +192,10 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({ isOpen, onClose })
               <span className="window-dot dot-yellow"></span>
               <span className="window-dot dot-green"></span>
             </div>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--on-surface-variant)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-              <TerminalIcon size={13} color="var(--tertiary)" /> dani@alcoy:~ (zsh)
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.75rem', color: 'var(--on-surface-variant)', display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+              <TerminalIcon size={13} color="var(--tertiary)" />
+              <img src="/logo.png" alt="Dani Cortés" style={{ height: '14px', width: 'auto' }} />
+              <span>dani@alcoy:~ (zsh)</span>
             </span>
           </div>
 

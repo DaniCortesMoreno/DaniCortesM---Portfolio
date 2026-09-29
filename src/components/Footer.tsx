@@ -12,7 +12,10 @@ export const Footer: React.FC = () => {
       <div className="site-container footer-content">
         {/* Brand & Note */}
         <div className="footer-brand-row">
-          <span className="footer-brand font-mono">&gt; dani.cortes()</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            <img src="/logo.png" alt="Dani Cortés" style={{ height: '22px', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 0 6px rgba(76, 215, 246, 0.35))' }} />
+            <span className="footer-brand font-mono">dani.cortes()</span>
+          </div>
           <span className="footer-divider">•</span>
           <p className="footer-copy">
             © {new Date().getFullYear()} {profile.name} — Diseñado y desarrollado con rigor técnico y sistema Obsidian Precision.

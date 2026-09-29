@@ -15,8 +15,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal, onOpenKBar }) =>
       <div className="site-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '3.75rem' }}>
         {/* Brand & Availability */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.875rem' }}>
-          <a href="#hero" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, fontSize: '0.9375rem', letterSpacing: '-0.02em', color: 'var(--on-surface)' }}>
-            <span style={{ fontFamily: 'var(--font-mono)', color: 'var(--primary)' }}>&gt;</span>
+          <a href="#hero" className="brand-link" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', fontWeight: 600, fontSize: '0.9375rem', letterSpacing: '-0.02em', color: 'var(--on-surface)' }}>
+            <img src="/logo.png" alt="Dani Cortés" className="brand-logo-img" />
             <span style={{ fontFamily: 'var(--font-mono)' }}>dani.cortes()</span>
           </a>
 
@@ -94,6 +94,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal, onOpenKBar }) =>
       )}
 
       <style>{`
+        .brand-logo-img {
+          height: 26px;
+          width: auto;
+          object-fit: contain;
+          transition: transform var(--transition-fast), filter var(--transition-fast);
+          filter: drop-shadow(0 0 8px rgba(76, 215, 246, 0.35));
+        }
+        .brand-link:hover .brand-logo-img {
+          transform: scale(1.08);
+          filter: drop-shadow(0 0 14px rgba(76, 215, 246, 0.65));
+        }
         .nav-link {
           font-family: var(--font-mono);
           font-size: 0.8125rem;

@@ -226,7 +226,10 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
             <span><kbd style={{ color: 'var(--on-surface)' }}>↑↓</kbd> Navegar</span>
             <span><kbd style={{ color: 'var(--on-surface)' }}>↵</kbd> Ejecutar</span>
           </div>
-          <span>Obsidian Palette v2.4</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <img src="/logo.png" alt="Dani Cortés" style={{ height: '14px', width: 'auto', opacity: 0.8 }} />
+            <span>Obsidian Palette v2.4</span>
+          </div>
         </div>
       </div>
     </div>
