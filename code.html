@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dani Cortés Moreno — Full-Stack Developer &amp; UI/UX Designer</title>
+<!-- Google Fonts: Geist, Inter, JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined (Exact literal spec) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms and Container-Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config Verbatim from Theme Specification -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-tertiary-container": "#002f38",
+            "inverse-primary": "#494bd6",
+            "tertiary-container": "#009eb9",
+            "primary-fixed": "#e1e0ff",
+            "on-primary-container": "#0d0096",
+            "surface-bright": "#393939",
+            "secondary": "#d0bcff",
+            "tertiary": "#4cd7f6",
+            "secondary-fixed": "#e9ddff",
+            "on-secondary-container": "#c4abff",
+            "on-surface-variant": "#c7c4d7",
+            "on-primary-fixed": "#07006c",
+            "on-primary-fixed-variant": "#2f2ebe",
+            "secondary-fixed-dim": "#d0bcff",
+            "on-secondary": "#3c0091",
+            "on-secondary-fixed-variant": "#5516be",
+            "surface": "#131313",
+            "on-primary": "#1000a9",
+            "surface-container-highest": "#353534",
+            "outline-variant": "#464554",
+            "on-error": "#690005",
+            "secondary-container": "#571bc1",
+            "surface-variant": "#353534",
+            "tertiary-fixed": "#acedff",
+            "on-background": "#e5e2e1",
+            "on-tertiary-fixed": "#001f26",
+            "inverse-surface": "#e5e2e1",
+            "on-surface": "#e5e2e1",
+            "primary-fixed-dim": "#c0c1ff",
+            "on-error-container": "#ffdad6",
+            "tertiary-fixed-dim": "#4cd7f6",
+            "surface-container-low": "#1c1b1b",
+            "surface-dim": "#131313",
+            "surface-container-lowest": "#0e0e0e",
+            "background": "#131313",
+            "on-secondary-fixed": "#23005c",
+            "outline": "#908fa0",
+            "error": "#ffb4ab",
+            "surface-container": "#201f1f",
+            "error-container": "#93000a",
+            "primary-container": "#8083ff",
+            "on-tertiary-fixed-variant": "#004e5c",
+            "surface-tint": "#c0c1ff",
+            "primary": "#c0c1ff",
+            "on-tertiary": "#003640",
+            "inverse-on-surface": "#313030",
+            "surface-container-high": "#2a2a2a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "space-md": "0.75rem",
+            "space-sm": "0.5rem",
+            "space-2xl": "2rem",
+            "gutter-lg": "1.5rem",
+            "space-xl": "1.5rem",
+            "margin-lg": "2rem",
+            "space-xs": "0.25rem",
+            "space-lg": "1rem",
+            "gutter": "1rem",
+            "margin": "1rem",
+            "margin-md": "1.5rem"
+          },
+          "fontFamily": {
+            "display-sm": ["Geist", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "headline-sm": ["Geist", "sans-serif"],
+            "label-md": ["JetBrains Mono", "monospace"],
+            "body-sm": ["Inter", "sans-serif"],
+            "headline-lg-mobile": ["Geist", "sans-serif"],
+            "headline-lg": ["Geist", "sans-serif"],
+            "headline-md": ["Geist", "sans-serif"],
+            "display-lg": ["Geist", "sans-serif"],
+            "label-sm": ["JetBrains Mono", "monospace"],
+            "body-md": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "display-sm": ["2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+            "body-lg": ["0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-sm": ["1.0625rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+            "label-md": ["0.8125rem", { "lineHeight": "1rem", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["1.5rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg": ["2rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.025em", "fontWeight": "600" }],
+            "headline-md": ["1.25rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+            "display-lg": ["3.5rem", { "lineHeight": "3.75rem", "letterSpacing": "-0.035em", "fontWeight": "600" }],
+            "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.02em", "fontWeight": "400" }],
+            "body-md": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "-0.005em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    /* Technical Grid Pattern */
+    .bg-tech-grid {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+    
+    /* Interactive Spotlight Card effect */
+    .spotlight-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .spotlight-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: inherit;
+      background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(192, 193, 255, 0.12), transparent 80%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .spotlight-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Specular Hairline Top Border */
+    .specular-border {
+      position: relative;
+    }
+    .specular-border::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+      pointer-events: none;
+    }
+
+    /* Smooth Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0e0e0e;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a2a2a;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #464554;
+    }
+  </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface selection:bg-primary selection:text-on-primary-container relative min-h-screen overflow-x-hidden font-body-md text-body-md antialiased bg-tech-grid">
+<!-- Ambient Specular Glow Highlights in Background -->
+<div class="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-primary/10 rounded-full blur-[140px] opacity-40"></div>
+<div class="absolute top-[45%] -right-40 w-[600px] h-[500px] bg-secondary-container/20 rounded-full blur-[160px] opacity-30"></div>
+<div class="absolute top-[80%] -left-32 w-[500px] h-[500px] bg-tertiary-container/15 rounded-full blur-[150px] opacity-25"></div>
+</div>
+<!-- SHARED COMPONENT: TopNavBar (docked full-width top sticky top-0 z-50) -->
+<header class="docked full-width top sticky top-0 z-50 bg-surface-container-lowest/80 dark:bg-surface-container-lowest/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline-variant/30 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 md:px-8 max-w-7xl mx-auto h-14">
+<!-- Brand Logo -->
+<a class="flex items-center gap-2 group" href="#hero">
+<span class="font-label-md text-label-md tracking-tight font-semibold text-on-surface dark:text-on-surface group-hover:text-primary transition-colors duration-150">
+          dani.cortes()
+        </span>
+<span class="hidden sm:inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-surface-container-high/60 border border-outline-variant/40 text-label-sm font-label-sm text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          Q2/Q3 Available
+        </span>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-primary dark:text-primary font-medium border-b border-primary dark:border-primary pb-0.5 text-label-md font-label-md" href="#hero">Work</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 text-label-md font-label-md" href="#skills">Skills</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 text-label-md font-label-md" href="#experience">Experience</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 text-label-md font-label-md" href="#about">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-on-surface dark:hover:text-on-surface transition-colors duration-150 text-label-md font-label-md" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-3">
+<div class="hidden lg:flex items-center gap-1 text-on-surface-variant mr-1">
+<button class="p-1.5 rounded hover:bg-surface-container-high/50 text-on-surface-variant hover:text-primary transition-all duration-150 active:scale-[0.98]" title="Terminal CLI View">
+<span class="material-symbols-outlined text-base">terminal</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container-high/50 text-on-surface-variant hover:text-primary transition-all duration-150 active:scale-[0.98]" title="Toggle Specular Theme">
+<span class="material-symbols-outlined text-base">palette</span>
+</button>
+</div>
+<a class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-label-sm font-label-sm text-on-surface bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/40 rounded transition-all duration-150 active:scale-[0.98]" href="#contact">
+          Get in Touch
+        </a>
+<a class="inline-flex items-center gap-1.5 px-3 py-1.5 text-label-sm font-label-sm text-on-primary bg-primary-fixed hover:bg-surface-bright border border-outline/30 rounded font-semibold transition-all duration-150 active:scale-[0.98] shadow-[0_0_12px_rgba(255,255,255,0.2)]" href="#contact">
+<span>Resume</span>
+<span class="material-symbols-outlined text-sm font-bold">north_east</span>
+</a>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="relative z-10 max-w-7xl mx-auto px-6 md:px-8 pt-10 md:pt-16 pb-24 space-y-28 md:space-y-36">
+<!-- 01. HERO SECTION -->
+<section class="relative pt-6 md:pt-12" id="hero">
+<!-- Status Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-outline-variant/50 mb-6 shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span>
+</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-on-surface">DISPONIBLE PARA NUEVOS PROYECTOS / FREELANCE</span>
+</div>
+<!-- Brutalist Header Title -->
+<div class="space-y-4">
+<h1 class="font-display-lg text-display-lg md:text-[4rem] text-transparent bg-clip-text bg-gradient-to-b from-white via-on-surface to-on-surface-variant/60 font-semibold tracking-[-0.035em] leading-[1.05]">
+          Dani Cortés Moreno
+        </h1>
+<!-- Dynamic Role Pills -->
+<div class="flex flex-wrap items-center gap-2 pt-1 pb-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high/60 border border-outline-variant/40 font-label-sm text-label-sm text-primary">
+<span class="text-outline-variant">&lt;</span>Diseñador UI/UX<span class="text-outline-variant">/&gt;</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high/60 border border-outline-variant/40 font-label-sm text-label-sm text-tertiary">
+<span class="text-outline-variant">[</span>Frontend Dev<span class="text-outline-variant">]</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high/60 border border-outline-variant/40 font-label-sm text-label-sm text-secondary">
+<span class="text-outline-variant">{</span>Backend Dev<span class="text-outline-variant">}</span>
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-high/60 border border-outline-variant/40 font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-outline-variant">#</span>Ecosistema WP
+          </span>
+</div>
+<!-- High-Contrast Tagline -->
+<p class="max-w-2xl font-body-lg text-body-lg text-on-surface-variant leading-relaxed pt-2">
+          Construyo soluciones digitales robustas, accesibles y optimizadas para el rendimiento. Fusionando estética specular, arquitectura de datos sólida y velocidad dev-tools.
+        </p>
+</div>
+<!-- Action Group CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-8">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-primary-fixed hover:bg-surface-bright text-on-primary-fixed font-headline-sm text-headline-sm font-medium transition-all duration-200 active:scale-[0.98] shadow-[0_0_20px_rgba(192,193,255,0.25)] group" href="#projects">
+<span>Ver Proyectos</span>
+<span class="material-symbols-outlined text-lg transition-transform group-hover:translate-y-0.5">south</span>
+</a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded bg-surface-container-low hover:bg-surface-container-high border border-outline-variant/50 text-on-surface font-headline-sm text-headline-sm font-medium transition-all duration-200 active:scale-[0.98] group" href="#contact">
+<span>Descargar CV</span>
+<span class="material-symbols-outlined text-lg text-outline transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">north_east</span>
+</a>
+</div>
+<!-- Telemetry / Live Dev Metrics Bento Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-12">
+<div class="spotlight-card specular-border p-4 rounded bg-surface-container-low/60 border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-label-sm text-label-sm">TELEMETRY // EXP</span>
+<span class="material-symbols-outlined text-sm text-primary">timer</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">+6 Años</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Creando productos web de alta fidelidad</p>
+</div>
+<div class="spotlight-card specular-border p-4 rounded bg-surface-container-low/60 border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-label-sm text-label-sm">PERFORMANCE AUDIT</span>
+<span class="material-symbols-outlined text-sm text-tertiary">speed</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-semibold text-tertiary tracking-tight">100% Core</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Core Web Vitals &amp; Accessibility focus</p>
+</div>
+<div class="spotlight-card specular-border p-4 rounded bg-surface-container-low/60 border border-outline-variant/20 flex flex-col justify-between">
+<div class="flex items-center justify-between text-outline mb-2">
+<span class="font-label-sm text-label-sm">RUNTIME MATRIX</span>
+<span class="material-symbols-outlined text-sm text-secondary">memory</span>
+</div>
+<div class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">Performant</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Stack moderno, TypeScript &amp; Edge Deploy</p>
+</div>
+</div>
+</section>
+<!-- 02. SOBRE MÍ (BENTO BOX ASIMÉTRICO) -->
+<section class="space-y-6" id="about">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">// 01. SOBRE MÍ</span>
+<h2 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">
+          Arquitectura limpia y diseño intencional
+        </h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+<!-- Bento Card 1: Main Bio + Code Snippet Preview (8 cols) -->
+<div class="lg:col-span-8 spotlight-card specular-border rounded bg-surface-container-low/70 border border-outline-variant/20 p-6 md:p-8 flex flex-col justify-between gap-6">
+<div class="space-y-4">
+<div class="inline-flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              CORE MANIFESTO &amp; PROFILE
+            </div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+              Soy un desarrollador Full-Stack y diseñador web radicado en Alcoy. Mi trabajo se sitúa en la intersección entre el diseño visual sofisticado y una ingeniería de software limpia. Aunque soy experto en llevar WordPress y builders al límite de su capacidad técnica, mi stack real no tiene barreras: construyo aplicaciones a medida e interfaces interactivas con React, Vue, TypeScript y Node.js.
+            </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              En el backend, me muevo con soltura en PHP, Laravel, y el diseño de bases de datos relacionales impecables, controlando cada despliegue con Git y pipelines automatizados.
+            </p>
+</div>
+<!-- Code Snippet Terminal Simulator -->
+<div class="rounded border border-outline-variant/30 bg-surface-container-lowest p-3.5 font-label-sm text-label-sm">
+<div class="flex items-center justify-between pb-2 mb-2 border-b border-outline-variant/20 text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error/70"></span>
+<span class="w-2 h-2 rounded-full bg-secondary/70"></span>
+<span class="w-2 h-2 rounded-full bg-tertiary/70"></span>
+<span class="ml-2 font-mono text-[11px] text-outline">architecture.config.ts</span>
+</span>
+<span class="text-[11px] text-outline">v2.4.0-specular</span>
+</div>
+<pre class="overflow-x-auto text-[11px] leading-5 font-mono text-on-surface-variant"><span class="text-secondary">export const</span> <span class="text-tertiary">developerProfile</span> = {
+  <span class="text-on-surface">location</span>: <span class="text-primary">'Alcoy, Alicante (ES)'</span>,
+  <span class="text-on-surface">coreValues</span>: [<span class="text-primary">'Surgical Precision'</span>, <span class="text-primary">'Zero Jitter'</span>, <span class="text-primary">'Sub-100ms Latency'</span>],
+  <span class="text-on-surface">craftsmanship</span>: <span class="text-secondary-fixed">Infinity</span>,
+  <span class="text-on-surface">readyForProduction</span>: <span class="text-tertiary">true</span>
+};</pre>
+</div>
+</div>
+<!-- Bento Card 2: Personal Balance & Lifestyle (4 cols) -->
+<div class="lg:col-span-4 spotlight-card specular-border rounded bg-surface-container-low/70 border border-outline-variant/20 p-6 md:p-8 flex flex-col justify-between gap-6">
+<div class="space-y-4">
+<div class="inline-flex items-center gap-2 text-outline font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              OFFLINE TELEMETRY
+            </div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface">
+              Equilibrio &amp; Resistencia
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Cuando no estoy puliendo interfaces pixel-perfect o conectando APIs, me encontrarás compitiendo en el campo de fútbol 7 o explorando rutas en la naturaleza; el equilibrio perfecto para mantener el código limpio y la creatividad a tope.
+            </p>
+</div>
+<!-- Lifestyle Tags -->
+<div class="space-y-2 pt-4">
+<div class="flex items-center gap-2 px-3 py-2 rounded bg-surface-container-high/40 border border-outline-variant/20 font-label-sm text-label-sm text-on-surface">
+<span class="text-base">⚽</span>
+<span>Fútbol 7 Competitive</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-2 rounded bg-surface-container-high/40 border border-outline-variant/20 font-label-sm text-label-sm text-on-surface">
+<span class="text-base">🌲</span>
+<span>Senderismo &amp; Naturaleza</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-2 rounded bg-surface-container-high/40 border border-outline-variant/20 font-label-sm text-label-sm text-on-surface">
+<span class="text-base">📍</span>
+<span>Alcoy, Alicante</span>
+</div>
+</div>
+</div>
+<!-- Bento Card 3: Interactive Tech Stack Matrix (12 cols) -->
+<div class="lg:col-span-12 spotlight-card specular-border rounded bg-surface-container-low/70 border border-outline-variant/20 p-6 md:p-8" id="skills">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-6 gap-2">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">// HARDWARE &amp; RUNTIMES</span>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface">Arsenal Tecnológico Verificado</h3>
+</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Hover para modular spotlight</div>
+</div>
+<!-- Stack Chips Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+<!-- React -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">React</span>
+<span class="text-outline font-label-sm text-[10px]">v18.3</span>
+</div>
+<!-- Node.js -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Node.js</span>
+<span class="text-outline font-label-sm text-[10px]">LTS</span>
+</div>
+<!-- Laravel -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Laravel</span>
+<span class="text-outline font-label-sm text-[10px]">PHP 8+</span>
+</div>
+<!-- Vue -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Vue</span>
+<span class="text-outline font-label-sm text-[10px]">v3.x</span>
+</div>
+<!-- TypeScript -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">TypeScript</span>
+<span class="text-outline font-label-sm text-[10px]">Strict</span>
+</div>
+<!-- WordPress -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">WordPress</span>
+<span class="text-outline font-label-sm text-[10px]">Custom</span>
+</div>
+<!-- SQL -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">SQL / Relational</span>
+<span class="text-outline font-label-sm text-[10px]">MySQL</span>
+</div>
+<!-- Git -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Git</span>
+<span class="text-outline font-label-sm text-[10px]">CI/CD</span>
+</div>
+<!-- Tailwind CSS -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Tailwind CSS</span>
+<span class="text-outline font-label-sm text-[10px]">JIT</span>
+</div>
+<!-- Next.js/Vite -->
+<div class="p-3 rounded bg-surface-container-lowest/80 border border-outline-variant/20 hover:border-primary/50 hover:shadow-[0_0_12px_rgba(192,193,255,0.2)] transition-all duration-150 flex items-center justify-between group">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">Next.js / Vite</span>
+<span class="text-outline font-label-sm text-[10px]">Edge</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 03. EXPERIENCIA (TIMELINE TÉCNICO MINIMALISTA) -->
+<section class="space-y-6" id="experience">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">// 02. TRAYECTORIA</span>
+<h2 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">
+          Evolución técnica y experiencia profesional
+        </h2>
+</div>
+<!-- Linear Timeline Container -->
+<div class="relative pl-6 md:pl-10 space-y-12 before:content-[''] before:absolute before:left-2 md:before:left-3.5 before:top-2 before:bottom-2 before:w-[1px] before:bg-outline-variant/30">
+<!-- Timeline Item 1 -->
+<div class="relative group">
+<!-- LED Node -->
+<div class="absolute -left-[27px] md:-left-[33px] top-1.5 w-3 h-3 rounded-full bg-surface-container-lowest border-2 border-primary group-hover:border-tertiary transition-colors shadow-[0_0_8px_rgba(192,193,255,0.8)]"></div>
+<div class="spotlight-card specular-border rounded bg-surface-container-low/50 border border-outline-variant/20 p-5 md:p-6 transition-all duration-150 hover:border-outline-variant/50">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                Freelance Web Designer &amp; Developer
+              </h3>
+<span class="font-label-sm text-label-sm text-tertiary px-2 py-0.5 rounded bg-tertiary-container/20 border border-tertiary/20 self-start sm:self-auto">
+                2025 — Presente
+              </span>
+</div>
+<div class="font-label-md text-label-md text-primary mb-3">Roles: Full-Stack Dev, UI/UX Design</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+              Gestión integral, estrategia visual y desarrollo técnico completo para clientes directos y agencias. Implementación de soluciones con rendimiento medido y arquitecturas escalables.
+            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">Client Management</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">Design Systems</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">High Conversion</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">Custom Stack</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative group">
+<!-- LED Node -->
+<div class="absolute -left-[27px] md:-left-[33px] top-1.5 w-3 h-3 rounded-full bg-surface-container-lowest border-2 border-outline group-hover:border-primary transition-colors"></div>
+<div class="spotlight-card specular-border rounded bg-surface-container-low/50 border border-outline-variant/20 p-5 md:p-6 transition-all duration-150 hover:border-outline-variant/50">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                Web Developer · Difusión Comunicación
+              </h3>
+<span class="font-label-sm text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container-high/50 self-start sm:self-auto">
+                2025
+              </span>
+</div>
+<div class="font-label-md text-label-md text-primary mb-3">Roles: Pixel-Perfect Dev, WP, Custom Dev</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+              Traducción fiel de diseños complejos a código limpio y arquitecturas sólidas. Desarrollo de themes personalizados, optimización de velocidad de carga y micro-interacciones.
+            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">Pixel-Perfect Layouts</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">WordPress Custom Architecture</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">Component Development</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative group">
+<!-- LED Node -->
+<div class="absolute -left-[27px] md:-left-[33px] top-1.5 w-3 h-3 rounded-full bg-surface-container-lowest border-2 border-outline group-hover:border-primary transition-colors"></div>
+<div class="spotlight-card specular-border rounded bg-surface-container-low/50 border border-outline-variant/20 p-5 md:p-6 transition-all duration-150 hover:border-outline-variant/50">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+                Web Developer &amp; Hosting Administrator · Neocopy
+              </h3>
+<span class="font-label-sm text-label-sm text-outline px-2 py-0.5 rounded bg-surface-container-high/50 self-start sm:self-auto">
+                2022
+              </span>
+</div>
+<div class="font-label-md text-label-md text-primary mb-3">Roles: Hosting &amp; DNS, Security, Management</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 leading-relaxed">
+              Gestión del ciclo de vida de proyectos, despliegue en servidores, administración de zonas DNS y optimización de bases de datos relacionales con auditorías de seguridad.
+            </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">Server Architecture</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">DNS Configuration</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">Database Tuning</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high/60 border border-outline-variant/30 font-label-sm text-label-sm text-on-surface">Security Audits</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 04. PROYECTOS (GRID DE TARJETAS EXPANDIBLES) -->
+<section class="space-y-6" id="projects">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">// 03. TRABAJOS SELECCIONADOS</span>
+<h2 class="font-headline-lg text-headline-lg font-semibold text-on-surface tracking-tight">
+            Casos de estudio &amp; Producción
+          </h2>
+</div>
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline border border-outline-variant/30 px-3 py-1.5 rounded bg-surface-container-low">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>5 Proyectos Verificados</span>
+</div>
+</div>
+<!-- Bento / Matrix of Project Cards (3 cols layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Project 1: DiseñoWebAlcoy -->
+<div class="spotlight-card specular-border rounded bg-surface-container-low/70 border border-outline-variant/20 overflow-hidden flex flex-col group transition-all duration-200 hover:border-outline-variant/50">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A clean modern digital workstation showcasing a minimal website interface mockup on a high resolution screen, set in a moody dark tech studio with soft cool rim lighting and deep slate shadows, evoking precision engineering and high speed web architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIFAsq9Qr3o7nUlPnUCbH-dW4WV32Dun6DNkMaZgmnfPfxgaI5xY8ZdxWXm4egxJPAx6htt3tSf_q5hGfV540FnQ8Mkow_EwNgRgKVO2L3eYdR6hb5pSxMdzQ9TOL-nmbW_vlUfO1VQp-GuVDqxsMOk3DHAiCNKBTPdqhryz62ebI_wUaJz41G7PSzTWnoHvdUT7afXC9sgzRlwcNETKxHywqXgbY5KkV-8_GPPCcGSc8JX56oSCbCfA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 text-on-surface">01 // PRODUCTION</span>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                DiseñoWebAlcoy
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Despliegue de identidad digital corporativa y estrategia SEO enfocada en la velocidad de carga y embudos de contacto de alta conversión.
+              </p>
+</div>
+<div class="space-y-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">WP</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">UI/UX</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">SEO</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-primary">Performance</span>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1">
+<span>Detalles</span>
+<span class="material-symbols-outlined text-xs">unfold_more</span>
+</button>
+<a class="font-label-sm text-label-sm text-primary hover:text-white transition-colors flex items-center gap-1" href="#contact">
+<span>Ver En Vivo</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2: Suministros Montfer -->
+<div class="spotlight-card specular-border rounded bg-surface-container-low/70 border border-outline-variant/20 overflow-hidden flex flex-col group transition-all duration-200 hover:border-outline-variant/50">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A dark industrial technology catalog dashboard display showing machinery telemetry and clean structured bento panels with neon cyan accents, placed in an elegant dark room with specular edge reflections and soft ambient dark mode lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaBTXJ4Qw34OzyX6yQUMx0G3AuIU0gIQ1nVDsx1H_tTAguc2wiYOYTbOvt-a4npA_mQJklPrvsnjwB2b1yN-HQhMv6Gmq1IcWOTAkC12E4ZO65kSJ9cr1kndi-NG_pzdNAfVgtxMGvyCAevShbcURlPf9MpHhUcdYH-YMlCUo784_YCneX85tvU89eoBpsodpTNttfQrIuopyiP2SYccjR7x88atdALACjH_Wlm3AVlnBKcFuJo60n4Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 text-on-surface">02 // E-COMMERCE</span>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Suministros Montfer
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                eCommerce hiper-optimizado de maquinaria industrial y digitalización de servicio técnico con sincronización de inventario en tiempo real.
+              </p>
+</div>
+<div class="space-y-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">WooCommerce</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">UI/UX</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-tertiary">B2B Portal</span>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1">
+<span>Detalles</span>
+<span class="material-symbols-outlined text-xs">unfold_more</span>
+</button>
+<a class="font-label-sm text-label-sm text-primary hover:text-white transition-colors flex items-center gap-1" href="#contact">
+<span>Ver En Vivo</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 3: Silvia Vicedo -->
+<div class="spotlight-card specular-border rounded bg-surface-container-low/70 border border-outline-variant/20 overflow-hidden flex flex-col group transition-all duration-200 hover:border-outline-variant/50">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A refined minimalist editorial website interface for legal advisory with sharp serif typography and clean monochrome grids, set in an architectural dark office environment with soft diffuse ambient light and clean specular reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8fi98GF9Rg1E5H9S38K-uchjdSXUY7DG98mZUqGx1Pe4x76oGZArJ4BEqBC6HfsBTZEowEjzdXGE4rdI7jMIPtwQpnsFb5MAMYev_XKu_2B1G-FlhN4nQm5BToVO5FobYl94ArkUcHuWhL8gptDby-iApwxICddZJx253C6qgoT7MKpIJdQLCzKUWmdi--IUeMXNesRne0QTIQup8_LG_s0FYeynp76CGANXOOxyVsqgTXkcpPcBVIw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 text-on-surface">03 // LEGAL TECH</span>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Silvia Vicedo
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Plataforma corporativa sobria para asesoría jurídica con blog engine y jerarquía visual legal impecable con arquitectura de contenido semántica.
+              </p>
+</div>
+<div class="space-y-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">Corporate</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">Editorial</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-secondary">Architecture</span>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1">
+<span>Detalles</span>
+<span class="material-symbols-outlined text-xs">unfold_more</span>
+</button>
+<a class="font-label-sm text-label-sm text-primary hover:text-white transition-colors flex items-center gap-1" href="#contact">
+<span>Ver En Vivo</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 4: Solaico (Spans 2 cols on tablet/desktop) -->
+<div class="md:col-span-2 spotlight-card specular-border rounded bg-surface-container-low/70 border border-outline-variant/20 overflow-hidden flex flex-col sm:flex-row group transition-all duration-200 hover:border-outline-variant/50">
+<div class="relative sm:w-1/2 h-52 sm:h-auto overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A high-tech clean energy control panel interface featuring solar flow telemetry, dark obsidian glass panels and neon emerald and cyan highlights, framed in a futuristic control center with subtle volumetric ambient darkness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKDi6oiBgTOb77eEbQZZGmV54ZyJXHdQfHWkiu5lCwX9uPc6aKJZtqIBp40oo_cbfnYchLZZ9aPrDIh1usRV5kOrDIZ-09-EpINir55GIpP83eZZstezdxVZu6vr9ofMgDkNKoSJIZbF3F5rHqveqMsW7ZwEBS-wp5voQBO__PFNweY8ByBnAPM1zZvrfTzv3ObNMVSCBjD6Frj9YhnIIwSZ7G1UwieE-mEDmS_T6Z7R-v8BZ9xpvv0A"/>
+<div class="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 text-on-surface">04 // CLEANTECH</span>
+</div>
+</div>
+<div class="p-6 sm:w-1/2 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                Solaico Renewables
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Plataforma corporativa de energía renovable con arquitectura web moderna, visualizaciones de captación solar e interactividad dinámica sin penalizaciones de payload.
+              </p>
+</div>
+<div class="space-y-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">Clean Energy</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">Interactive UI</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-tertiary">NextGen Tech</span>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1">
+<span>Detalles de Arquitectura</span>
+<span class="material-symbols-outlined text-xs">unfold_more</span>
+</button>
+<a class="font-label-sm text-label-sm text-primary hover:text-white transition-colors flex items-center gap-1" href="#contact">
+<span>Ver En Vivo</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 5: SunVision -->
+<div class="spotlight-card specular-border rounded bg-surface-container-low/70 border border-outline-variant/20 overflow-hidden flex flex-col group transition-all duration-200 hover:border-outline-variant/50">
+<div class="relative h-48 w-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105 opacity-80 group-hover:opacity-100" data-alt="A smartphone mockup rendering a high-speed optical product interface with ultra fluid typography, dark mode interface and neon violet accents, captured floating over an obsidian desk with soft rim light and specular glints." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDgpevquTra0P5vay49_NamEPaDclSEZ7ewwgyy7zgA3d4CtitxL6t--9BrAdWkRtYBK7m_okigk4jCzGDmRkvG-x8lFcZG-f5Z0EgO62TSd7RdtWLShQAthgSoO5WfsVCujjr_dUrN1IMZNOy8GW-fTCHto0nRub6CwDYT_o7GQElWphZERLbUlXdwWs-vuoe1NiEHkgMCm5UloRL0D-OgnZW4-VlgO9HAxGxGMU_dbV_nxAJbes7gg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-low via-transparent to-transparent"></div>
+<div class="absolute top-3 right-3">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 text-on-surface">05 // MOBILE FIRST</span>
+</div>
+</div>
+<div class="p-5 flex-1 flex flex-col justify-between space-y-4">
+<div>
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface group-hover:text-primary transition-colors">
+                SunVision Optics
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+                Interfaz ultra limpia y optimización extrema de tiempos de carga en dispositivos móviles con arquitectura responsiva y animaciones sub-pixel.
+              </p>
+</div>
+<div class="space-y-4">
+<div class="flex flex-wrap gap-1.5">
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">Mobile-First</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-primary">99+ Lighthouse</span>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high border border-outline-variant/30 text-on-surface">Micro-animations</span>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-outline-variant/20">
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface transition-colors flex items-center gap-1">
+<span>Detalles</span>
+<span class="material-symbols-outlined text-xs">unfold_more</span>
+</button>
+<a class="font-label-sm text-label-sm text-primary hover:text-white transition-colors flex items-center gap-1" href="#contact">
+<span>Ver En Vivo</span>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 05. CONTACTO -->
+<section class="relative pt-6" id="contact">
+<div class="spotlight-card specular-border rounded bg-surface-container-low/60 border border-outline-variant/20 p-8 md:p-12 relative overflow-hidden">
+<!-- Ambient Glow Inset -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="max-w-3xl space-y-6">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase">// 04. CONEXIÓN &amp; TELEMETRÍA</span>
+<h2 class="font-display-sm text-display-sm md:text-display-lg text-on-surface font-semibold tracking-[-0.03em] leading-tight">
+            Let's build something.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            Disponible para colaboraciones de ingeniería de alto impacto, desarrollo a medida o diseño de interfaces digitales ambiciosas. Respondiendo en menos de 24 horas laborables.
+          </p>
+<!-- Contact Telemetry Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+<!-- Email Item with 1-Click Copy -->
+<div class="p-4 rounded bg-surface-container-lowest/80 border border-outline-variant/30 flex items-center justify-between group">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase block">DIRECT EMAIL</span>
+<span class="font-label-md text-label-md text-on-surface select-all" id="email-text">danicortesmoreno@gmail.com</span>
+</div>
+<button class="p-2 rounded bg-surface-container-high/60 hover:bg-primary/20 text-on-surface hover:text-primary transition-colors" id="copy-email-btn" title="Copiar correo">
+<span class="material-symbols-outlined text-sm" id="copy-icon">content_copy</span>
+</button>
+</div>
+<!-- Phone Item -->
+<div class="p-4 rounded bg-surface-container-lowest/80 border border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase block">TELEPHONE &amp; SIGNAL</span>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="tel:+34601438441">
+                  +34 601 43 84 41
+                </a>
+</div>
+<span class="material-symbols-outlined text-outline text-sm">call</span>
+</div>
+<!-- Location Item -->
+<div class="p-4 rounded bg-surface-container-lowest/80 border border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase block">CURRENT BASE</span>
+<span class="font-label-md text-label-md text-on-surface">Alcoy, Alicante, España (UTC+1)</span>
+</div>
+<span class="material-symbols-outlined text-outline text-sm">location_on</span>
+</div>
+<!-- Social Terminal Links -->
+<div class="p-4 rounded bg-surface-container-lowest/80 border border-outline-variant/30 flex items-center justify-between">
+<div>
+<span class="font-label-sm text-[10px] text-outline uppercase block">ECOSYSTEM LINKS</span>
+<div class="flex items-center gap-3 pt-1">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="https://github.com" rel="noopener" target="_blank">GitHub</a>
+<span class="text-outline-variant">/</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="https://linkedin.com" rel="noopener" target="_blank">LinkedIn</a>
+<span class="text-outline-variant">/</span>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="https://read.cv" rel="noopener" target="_blank">ReadCV</a>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-sm">public</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- SHARED COMPONENT: Footer (docked full-width bottom) -->
+<footer class="docked full-width bottom bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 dark:border-outline-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 md:px-8 py-8 max-w-7xl mx-auto gap-4">
+<!-- Brand & Copyright -->
+<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+<span class="font-label-md text-label-md text-on-surface dark:text-on-surface font-semibold">dani.cortes()</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-on-surface-variant">
+          © 2025 Dani Cortés Moreno — Built with Next-gen Tooling &amp; Specular Design System
+        </p>
+</div>
+<!-- Links Cluster -->
+<div class="flex items-center gap-4">
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150 active:scale-95" href="https://github.com" rel="noopener" target="_blank">GitHub</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150 active:scale-95" href="https://linkedin.com" rel="noopener" target="_blank">LinkedIn</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150 active:scale-95" href="https://twitter.com" rel="noopener" target="_blank">Twitter/X</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150 active:scale-95" href="https://read.cv" rel="noopener" target="_blank">ReadCV</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary transition-colors duration-150 active:scale-95" href="#hero">RSS</a>
+</div>
+</div>
+</footer>
+<!-- INNOVATIVE COMPONENT: WHATSAPP SPRING EXPANDABLE BUTTON -->
+<aside class="fixed bottom-6 right-6 z-50">
+<a class="group flex items-center h-12 bg-surface-container-lowest/90 backdrop-blur-xl border border-outline-variant/40 hover:border-tertiary/60 shadow-[0_10px_30px_rgba(0,0,0,0.8),0_0_20px_rgba(76,215,246,0.15)] rounded-full px-3.5 transition-all duration-300 ease-out hover:scale-105 active:scale-95 overflow-hidden" href="https://wa.me/34601438441" id="whatsapp-toggle" rel="noopener" target="_blank">
+<!-- Circular WhatsApp / Chat Icon with Neon Pulse Indicator -->
+<div class="relative flex items-center justify-center w-6 h-6 shrink-0">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-40"></span>
+<span class="material-symbols-outlined text-tertiary text-xl">chat</span>
+</div>
+<!-- Spring Revealed Label on Hover -->
+<div class="max-w-0 opacity-0 group-hover:max-w-xs group-hover:opacity-100 group-hover:ml-3 transition-all duration-300 ease-in-out whitespace-nowrap overflow-hidden">
+<span class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1.5">
+<span>Habla conmigo en WhatsApp</span>
+<span class="material-symbols-outlined text-xs text-tertiary">north_east</span>
+</span>
+</div>
+</a>
+</aside>
+<!-- LIGHTWEIGHT INLINE JAVASCRIPT MICROINTERACTIONS -->
+<script>
+    // 1. Spotlight Tracking for Bento / Card containers
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.spotlight-card');
+      
+      cards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          card.style.setProperty('--mouse-x', `${x}px`);
+          card.style.setProperty('--mouse-y', `${y}px`);
+        });
+      });
+
+      // 2. 1-Click Copy Email Interaction
+      const copyBtn = document.getElementById('copy-email-btn');
+      const emailText = document.getElementById('email-text');
+      const copyIcon = document.getElementById('copy-icon');
+
+      if (copyBtn && emailText && copyIcon) {
+        copyBtn.addEventListener('click', () => {
+          navigator.clipboard.writeText(emailText.innerText.trim()).then(() => {
+            copyIcon.innerText = 'check';
+            copyBtn.classList.add('text-tertiary');
+            setTimeout(() => {
+              copyIcon.innerText = 'content_copy';
+              copyBtn.classList.remove('text-tertiary');
+            }, 2000);
+          }).catch(err => {
+            console.error('Failed to copy text: ', err);
+          });
+        });
+      }
+    });
+  </script>
+</body></html>

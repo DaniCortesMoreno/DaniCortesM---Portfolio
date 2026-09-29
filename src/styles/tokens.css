@@ -1,0 +1,81 @@
+:root {
+  /* Surface Scale (Obsidian Precision) */
+  --canvas-base: #0a0a0a;
+  --surface: #131313;
+  --surface-dim: #131313;
+  --surface-bright: #393939;
+  --surface-container-lowest: #0e0e0e;
+  --surface-container-low: #1c1b1b;
+  --surface-container: #201f1f;
+  --surface-container-high: #2a2a2a;
+  --surface-container-highest: #353534;
+  
+  /* Text & Foreground */
+  --on-surface: #e5e2e1;
+  --on-surface-variant: #c7c4d7;
+  --muted-body: #a1a1aa;
+  --dimmed-meta: #71717a;
+  
+  /* Outlines & Hairlines */
+  --outline: #908fa0;
+  --outline-variant: #464554;
+  --hairline-border: rgba(255, 255, 255, 0.08);
+  --hairline-subtle: rgba(255, 255, 255, 0.04);
+  --hairline-hover: rgba(255, 255, 255, 0.18);
+  
+  /* Primary Continuum (Electric Indigo / Violet) */
+  --primary: #c0c1ff;
+  --on-primary: #1000a9;
+  --primary-container: #8083ff;
+  --on-primary-container: #0d0096;
+  --primary-fixed: #e1e0ff;
+  --on-primary-fixed: #07006c;
+  --accent-indigo: #6366f1;
+  --accent-violet: #8b5cf6;
+  
+  /* Secondary Continuum */
+  --secondary: #d0bcff;
+  --on-secondary: #3c0091;
+  --secondary-container: #571bc1;
+  --on-secondary-container: #c4abff;
+  
+  /* Tertiary / Telemetry Continuum (Electric Cyan) */
+  --tertiary: #4cd7f6;
+  --on-tertiary: #003640;
+  --tertiary-container: #009eb9;
+  --accent-cyan: #06b6d4;
+  
+  /* Status & Alerts */
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --success: #34d399;
+
+  /* Typography */
+  --font-display: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
+  --gutter: 1rem;
+  --gutter-lg: 1.5rem;
+
+  /* Radii */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 350ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
