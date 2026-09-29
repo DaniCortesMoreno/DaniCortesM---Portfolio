@@ -3,7 +3,7 @@ export const profile = {
   title: 'Full-Stack Developer & UI/UX Designer',
   tagline: 'Construyo soluciones digitales robustas, accesibles y optimizadas para el rendimiento. Fusionando estética specular, arquitectura de datos sólida y velocidad dev-tools.',
   location: 'Alcoy, Alicante (Desplazamiento presencial a cualquier lugar)',
-  availability: 'Q2/Q3 Available',
+  availability: 'Disponible para proyectos',
   availabilityBadge: 'DISPONIBLE PARA NUEVOS PROYECTOS / FREELANCE',
   email: 'danicortesmoreno@gmail.com',
   phone: '+34 601 43 84 41',
