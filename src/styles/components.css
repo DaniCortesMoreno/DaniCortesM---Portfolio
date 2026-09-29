@@ -104,6 +104,24 @@
   transform: scale(0.98);
 }
 
+/* Prominent CV Button */
+.btn-cv-prominent {
+  background: linear-gradient(135deg, rgba(76, 215, 246, 0.1) 0%, rgba(192, 193, 255, 0.05) 100%);
+  border: 1px solid rgba(76, 215, 246, 0.3);
+  box-shadow: 0 0 16px rgba(76, 215, 246, 0.08);
+  font-weight: 500;
+  color: var(--on-surface);
+  transition: all var(--transition-medium);
+}
+
+.btn-cv-prominent:hover {
+  background: linear-gradient(135deg, rgba(76, 215, 246, 0.18) 0%, rgba(192, 193, 255, 0.12) 100%);
+  border-color: rgba(76, 215, 246, 0.6);
+  box-shadow: 0 0 25px rgba(76, 215, 246, 0.25);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
 /* Status Badges & Pills */
 .status-pill {
   display: inline-flex;
@@ -138,6 +156,8 @@
   opacity: 0.5;
   animation: pulse-ring 2s infinite ease-out;
 }
+
+
 
 @keyframes pulse-ring {
   0% { transform: scale(1); opacity: 0.7; }
@@ -181,15 +201,33 @@
 .dot-yellow { background-color: var(--secondary); }
 .dot-green { background-color: var(--tertiary); }
 
-/* Sticky Header Glass */
+/* Fixed Header Glass (Floats seamlessly over full-screen hero banner) */
 .navbar-glass {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 50;
-  background-color: rgba(14, 14, 14, 0.82);
+  transition: background-color 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Seamlessly merged with the Hero Banner (No harsh border, transparent gradient) */
+.navbar-glass.is-banner-transparent {
+  background: linear-gradient(180deg, rgba(8, 7, 12, 0.75) 0%, rgba(8, 7, 12, 0.25) 60%, transparent 100%);
+  border-bottom: 1px solid transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+}
+
+/* Frosted glass when scrolling down into portfolio content */
+.navbar-glass.is-scrolled {
+  background-color: rgba(14, 13, 20, 0.88);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--hairline-border);
-  transition: all var(--transition-normal);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 /* Modal Backdrops & Overlays */

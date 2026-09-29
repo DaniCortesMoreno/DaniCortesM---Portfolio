@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, Hash, Terminal, Mail, MessageSquare, ExternalLink, CornerDownLeft } from 'lucide-react';
+import { Search, Hash, Terminal, Mail, MessageSquare, ExternalLink, CornerDownLeft, FileText } from 'lucide-react';
 import { projects } from '../data/projects.ts';
 import { profile } from '../data/profile.ts';
 import confetti from 'canvas-confetti';
@@ -73,6 +73,16 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
       run: () => { window.location.hash = 'contact'; onClose(); }
     },
 
+    // CV & Documents
+    {
+      id: 'act-cv',
+      title: 'Abrir Curriculum Vitae (PDF) en pestaña nueva',
+      category: 'Documentos & CV',
+      icon: <FileText size={15} color="var(--primary)" />,
+      shortcut: 'CV',
+      run: () => { window.open(profile.cvPdf, '_blank'); onClose(); }
+    },
+
     // Interactive Actions
     {
       id: 'act-terminal',
@@ -100,6 +110,22 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
       category: 'Contacto',
       icon: <MessageSquare size={15} color="var(--tertiary)" />,
       run: () => { window.open(profile.whatsappUrl, '_blank'); onClose(); }
+    },
+    {
+      id: 'act-github',
+      title: 'Abrir Perfil de GitHub (@DaniCortesMoreno)',
+      category: 'Redes & Enlaces',
+      icon: <ExternalLink size={15} color="var(--secondary)" />,
+      shortcut: 'GH',
+      run: () => { window.open(profile.social.github, '_blank'); onClose(); }
+    },
+    {
+      id: 'act-linkedin',
+      title: 'Abrir Perfil de LinkedIn (Daniel Cortés Moreno)',
+      category: 'Redes & Enlaces',
+      icon: <ExternalLink size={15} color="var(--primary)" />,
+      shortcut: 'IN',
+      run: () => { window.open(profile.social.linkedin, '_blank'); onClose(); }
     },
 
     // Projects directly

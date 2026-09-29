@@ -52,6 +52,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({ isOpen, onClose })
       case 'help':
         response = (
           <div style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: '0.35rem', color: 'var(--on-surface-variant)' }}>
+            <span style={{ color: 'var(--primary)' }}>cv</span> <span>Abrir Curriculum Vitae (PDF) en pestaña nueva</span>
             <span style={{ color: 'var(--primary)' }}>neofetch</span> <span>Telemetría y resumen del perfil</span>
             <span style={{ color: 'var(--primary)' }}>projects</span> <span>Listado de proyectos destacados en producción</span>
             <span style={{ color: 'var(--primary)' }}>skills</span> <span>Arsenal tecnológico de desarrollo</span>
@@ -79,7 +80,7 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({ isOpen, onClose })
               <div><span style={{ color: 'var(--tertiary)' }}>ROLE:</span> Full-Stack Developer &amp; UI/UX</div>
               <div><span style={{ color: 'var(--tertiary)' }}>LOCATION:</span> Alcoy, Alicante (ES)</div>
               <div><span style={{ color: 'var(--tertiary)' }}>UPTIME:</span> +6 Años en desarrollo web</div>
-              <div><span style={{ color: 'var(--tertiary)' }}>CORE:</span> React, TypeScript, Node.js, Laravel, WordPress</div>
+              <div><span style={{ color: 'var(--tertiary)' }}>CORE:</span> React 19/18, TypeScript, Node.js, Express, Headless WordPress, WooCommerce</div>
               <div><span style={{ color: 'var(--tertiary)' }}>STATUS:</span> {profile.availability}</div>
             </div>
           </div>
@@ -101,9 +102,9 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({ isOpen, onClose })
       case 'skills':
         response = (
           <div style={{ color: 'var(--on-surface-variant)' }}>
-            <div><strong style={{ color: 'var(--primary)' }}>Frontend:</strong> React 18, TypeScript Strict, Next.js, Vite, Vue 3, Tailwind CSS</div>
-            <div style={{ marginTop: '0.25rem' }}><strong style={{ color: 'var(--tertiary)' }}>Backend:</strong> Node.js LTS, Laravel PHP 8+, WordPress Custom, MySQL / Relacional</div>
-            <div style={{ marginTop: '0.25rem' }}><strong style={{ color: 'var(--secondary)' }}>DevOps:</strong> Git CI/CD, Nginx, Linux SysAdmin, DNS Tuning</div>
+            <div><strong style={{ color: 'var(--primary)' }}>Frontend:</strong> React 19/18, TypeScript Strict, Tailwind CSS, Vite, Divi Custom CSS, Vue 3</div>
+            <div style={{ marginTop: '0.25rem' }}><strong style={{ color: 'var(--tertiary)' }}>Backend:</strong> Node.js, Express.js, Headless WordPress, WooCommerce, REST APIs, Laravel, MySQL</div>
+            <div style={{ marginTop: '0.25rem' }}><strong style={{ color: 'var(--secondary)' }}>Security &amp; DevOps:</strong> Ciberseguridad Oficial, Hardening OWASP, JWT &amp; Bcrypt, Git CI/CD, Nginx/Linux, Hostinger Cloud</div>
           </div>
         );
         break;
@@ -114,6 +115,16 @@ export const TerminalModal: React.FC<TerminalModalProps> = ({ isOpen, onClose })
             <div>Email: <a href={`mailto:${profile.email}`} style={{ color: 'var(--primary)' }}>{profile.email}</a></div>
             <div>Tel: <a href={`tel:${profile.phoneTel}`} style={{ color: 'var(--tertiary)' }}>{profile.phone}</a></div>
             <div>GitHub: <a href={profile.social.github} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--secondary)' }}>github.com</a></div>
+          </div>
+        );
+        break;
+
+      case 'cv':
+      case 'resume':
+        window.open(profile.cvPdf, '_blank');
+        response = (
+          <div style={{ color: 'var(--tertiary)' }}>
+            Abriendo Curriculum Vitae de Daniel Cortés Moreno en PDF en una nueva pestaña...
           </div>
         );
         break;

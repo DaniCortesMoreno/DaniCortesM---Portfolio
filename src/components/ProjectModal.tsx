@@ -29,9 +29,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '780px', maxHeight: '90vh', display: 'flex', flexDirection: 'column' }}>
         {/* Modal Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.25rem 1.75rem', borderBottom: '1px solid var(--hairline-border)', backgroundColor: 'var(--surface-container-lowest)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
             <span className="kbd-badge" style={{ color: 'var(--primary)' }}>{project.number} // {project.categoryTag}</span>
             <h3 style={{ margin: 0, fontSize: '1.25rem', fontFamily: 'var(--font-display)', fontWeight: 600 }}>{project.title}</h3>
+            {project.statusBadge && (
+              <span className="kbd-badge" style={{ color: 'var(--tertiary)', border: '1px solid rgba(76, 215, 246, 0.4)', background: 'rgba(76, 215, 246, 0.08)', fontSize: '0.6875rem' }}>
+                {project.statusBadge}
+              </span>
+            )}
           </div>
           <button onClick={onClose} style={{ color: 'var(--dimmed-meta)', padding: '0.25rem' }} aria-label="Cerrar modal">
             <X size={20} />
@@ -42,8 +47,19 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         <div style={{ padding: '1.75rem', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
           {/* Hero Image & Metrics */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
-            <div style={{ borderRadius: 'var(--radius-sm)', overflow: 'hidden', height: '180px', border: '1px solid var(--hairline-border)' }}>
-              <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+            <div style={{ borderRadius: 'var(--radius-sm)', overflow: 'hidden', border: '1px solid var(--hairline-border)', backgroundColor: 'var(--surface-container-lowest)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.45rem 0.75rem', background: 'rgba(14, 18, 24, 0.95)', borderBottom: '1px solid rgba(255, 255, 255, 0.08)', fontSize: '0.6875rem', fontFamily: 'var(--font-mono)' }}>
+                <div style={{ display: 'flex', gap: '5px' }}>
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#ff5f56' }}></span>
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#ffbd2e' }}></span>
+                  <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#27c93f' }}></span>
+                </div>
+                <span style={{ color: 'var(--on-surface-variant)', fontSize: '0.6875rem' }}>{project.displayUrl || 'sitio-web.com'}</span>
+                <span style={{ color: 'var(--tertiary)', fontSize: '0.625rem' }}>SSL 🔒</span>
+              </div>
+              <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
+                <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
+              </div>
             </div>
 
             {/* Metrics */}

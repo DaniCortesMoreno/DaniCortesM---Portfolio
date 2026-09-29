@@ -3,6 +3,7 @@ import './styles/global.css';
 import './styles/components.css';
 import { useSpotlight } from './hooks/useSpotlight.ts';
 import { Navbar } from './components/Navbar.tsx';
+import { HeroBanner3D } from './components/HeroBanner3D.tsx';
 import { Hero } from './components/Hero.tsx';
 import { About } from './components/About.tsx';
 import { Skills } from './components/Skills.tsx';
@@ -35,6 +36,9 @@ export const App: React.FC = () => {
         onOpenTerminal={() => setIsTerminalOpen(true)}
         onOpenKBar={() => setIsKBarOpen(true)}
       />
+
+      {/* 100% Width & 100% Height Opening Hero Banner */}
+      <HeroBanner3D />
 
       {/* Main Content Layout */}
       <main className="site-container" style={{ position: 'relative', zIndex: 10 }}>

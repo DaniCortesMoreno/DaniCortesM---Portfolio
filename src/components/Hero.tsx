@@ -1,10 +1,10 @@
 import React from 'react';
 import { profile } from '../data/profile.ts';
-import { ArrowDown, ArrowUpRight, Timer, Gauge, Cpu } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Timer, Gauge, Cpu, FileText } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="hero" style={{ paddingTop: '2.5rem', paddingBottom: '3.5rem' }}>
+    <section id="intro" style={{ paddingTop: '3.5rem', paddingBottom: '3.5rem' }}>
       {/* Availability Pill */}
       <div className="status-pill" style={{ marginBottom: '1.75rem', display: 'inline-flex' }}>
         <span className="status-dot"></span>
@@ -66,8 +66,22 @@ export const Hero: React.FC = () => {
           <ArrowDown size={17} />
         </a>
 
+        {/* Dedicated Highly-Visible CV PDF Button (Opens directly in new tab) */}
+        <a
+          href={profile.cvPdf}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-secondary btn-cv-prominent"
+          style={{ padding: '0.75rem 1.5rem', fontSize: '0.9375rem', display: 'inline-flex', alignItems: 'center', gap: '0.55rem' }}
+          title="Abrir Curriculum Vitae de Daniel Cortés en PDF (Pestaña nueva)"
+        >
+          <FileText size={17} color="var(--primary)" />
+          <span>Curriculum Vitae (PDF)</span>
+          <ArrowUpRight size={15} style={{ opacity: 0.7 }} />
+        </a>
+
         <a href="#contact" className="btn-secondary" style={{ padding: '0.75rem 1.5rem', fontSize: '0.9375rem' }}>
-          <span>Contactar / Descargar CV</span>
+          <span>Contactar</span>
           <ArrowUpRight size={17} />
         </a>
       </div>

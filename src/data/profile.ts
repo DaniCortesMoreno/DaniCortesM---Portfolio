@@ -2,18 +2,18 @@ export const profile = {
   name: 'Dani Cortés Moreno',
   title: 'Full-Stack Developer & UI/UX Designer',
   tagline: 'Construyo soluciones digitales robustas, accesibles y optimizadas para el rendimiento. Fusionando estética specular, arquitectura de datos sólida y velocidad dev-tools.',
-  location: 'Alcoy, Alicante, España (UTC+1)',
+  location: 'Alcoy, Alicante (Desplazamiento presencial a cualquier lugar)',
   availability: 'Q2/Q3 Available',
   availabilityBadge: 'DISPONIBLE PARA NUEVOS PROYECTOS / FREELANCE',
   email: 'danicortesmoreno@gmail.com',
   phone: '+34 601 43 84 41',
   phoneTel: '+34601438441',
   whatsappUrl: 'https://wa.me/34601438441',
+  cvPdf: '/Daniel_Cortes_Moreno_CV.pdf',
   social: {
-    github: 'https://github.com',
-    linkedin: 'https://linkedin.com',
-    readcv: 'https://read.cv',
-    twitter: 'https://twitter.com'
+    github: 'https://github.com/DaniCortesMoreno',
+    linkedin: 'https://www.linkedin.com/in/dani-cort%C3%A9s-moreno-762087346/',
+    readcv: '/Daniel_Cortes_Moreno_CV.pdf'
   },
   metrics: [
     {
@@ -36,8 +36,8 @@ export const profile = {
     }
   ],
   offlineLifestyle: [
-    { icon: '⚽', label: 'Fútbol 7 Competitive' },
+    { icon: '⚽', label: 'Fútbol' },
     { icon: '🌲', label: 'Senderismo & Naturaleza' },
-    { icon: '📍', label: 'Alcoy, Alicante' }
+    { icon: '🏃', label: 'Deportes' }
   ]
 };

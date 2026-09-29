@@ -26,7 +26,6 @@ export const Footer: React.FC = () => {
         <div className="footer-links-row">
           <a href={profile.social.github} target="_blank" rel="noopener noreferrer" className="footer-link">GitHub</a>
           <a href={profile.social.linkedin} target="_blank" rel="noopener noreferrer" className="footer-link">LinkedIn</a>
-          <a href={profile.social.twitter} target="_blank" rel="noopener noreferrer" className="footer-link">Twitter/X</a>
           <a href={profile.social.readcv} target="_blank" rel="noopener noreferrer" className="footer-link">ReadCV</a>
 
           <button onClick={scrollToTop} className="footer-scroll-top" title="Volver al inicio">

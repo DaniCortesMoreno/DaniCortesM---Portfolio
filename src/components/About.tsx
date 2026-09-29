@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Copy, Check } from 'lucide-react';
+import { Copy, Check, FileText, ArrowUpRight } from 'lucide-react';
 import { profile } from '../data/profile.ts';
 
 export const About: React.FC = () => {
@@ -36,11 +36,15 @@ export const About: React.FC = () => {
             </div>
 
             <p style={{ fontSize: '1rem', lineHeight: 1.7, color: 'var(--on-surface)' }}>
-              Soy un desarrollador Full-Stack y diseñador web radicado en Alcoy. Mi trabajo se sitúa en la intersección entre el diseño visual sofisticado y una ingeniería de software limpia. Aunque soy experto en llevar WordPress y builders al límite de su capacidad técnica, mi stack real no tiene barreras: construyo aplicaciones a medida e interfaces interactivas con React, Vue, TypeScript y Node.js.
+              Soy un desarrollador Full-Stack y creador digital radicado en Alcoy. Mi trabajo se sitúa en la intersección entre el diseño visual sofisticado y una ingeniería limpia y medible.
             </p>
 
             <p style={{ fontSize: '0.875rem', lineHeight: 1.65, color: 'var(--muted-body)' }}>
-              En el backend, me muevo con soltura en PHP, Laravel, y el diseño de bases de datos relacionales impecables, controlando cada despliegue con Git y pipelines automatizados.
+              En el aspecto técnico, combino React, TypeScript, WordPress a medida, PHP y arquitecturas sólidas. Además, <strong>cuento con el certificado oficial de Ciberseguridad</strong>, por lo que tu página web siempre contará con las mayores y más rigurosas garantías de seguridad, cifrado y protección de datos.
+            </p>
+
+            <p style={{ fontSize: '0.875rem', lineHeight: 1.65, color: 'var(--muted-body)' }}>
+              Pero mi auténtico diferencial es el <strong>compromiso presencial y humano</strong>: aunque sea de Alcoy, <strong>trabajo para quien sea y donde sea</strong>. Me desplazo físicamente hasta tu local o empresa para conocerte y vivir el proyecto in situ, y cada cierto tiempo me paso a ver cómo os está funcionando la web. Para mí, ese trato cercano y del día a día es lo que marca la diferencia.
             </p>
           </div>
 
@@ -65,12 +69,32 @@ export const About: React.FC = () => {
             <pre style={{ margin: 0, overflowX: 'auto', fontSize: '0.75rem', lineHeight: 1.6 }}>
               <span style={{ color: 'var(--secondary)' }}>export const</span> <span style={{ color: 'var(--tertiary)' }}>developerProfile</span> = &#123;{'\n'}
               {'  '}<span style={{ color: 'var(--on-surface)' }}>name:</span> <span style={{ color: 'var(--primary)' }}>'{profile.name}'</span>,{'\n'}
-              {'  '}<span style={{ color: 'var(--on-surface)' }}>location:</span> <span style={{ color: 'var(--primary)' }}>'Alcoy, Alicante (ES)'</span>,{'\n'}
-              {'  '}<span style={{ color: 'var(--on-surface)' }}>coreValues:</span> [<span style={{ color: 'var(--primary)' }}>'Surgical Precision'</span>, <span style={{ color: 'var(--primary)' }}>'Zero Jitter'</span>, <span style={{ color: 'var(--primary)' }}>'Sub-100ms Latency'</span>],{'\n'}
+              {'  '}<span style={{ color: 'var(--on-surface)' }}>location:</span> <span style={{ color: 'var(--primary)' }}>'Alcoy &amp; Desplazamiento Presencial'</span>,{'\n'}
+              {'  '}<span style={{ color: 'var(--on-surface)' }}>cybersecurity:</span> <span style={{ color: 'var(--tertiary)' }}>'Certificación Oficial'</span>,{'\n'}
+              {'  '}<span style={{ color: 'var(--on-surface)' }}>coreValues:</span> [<span style={{ color: 'var(--primary)' }}>'Trato Presencial &amp; Físico'</span>, <span style={{ color: 'var(--primary)' }}>'Seguimiento en tu Empresa'</span>, <span style={{ color: 'var(--primary)' }}>'Zero Jitter'</span>],{'\n'}
               {'  '}<span style={{ color: 'var(--on-surface)' }}>craftsmanship:</span> <span style={{ color: 'var(--secondary)' }}>Infinity</span>,{'\n'}
-              {'  '}<span style={{ color: 'var(--on-surface)' }}>readyForProduction:</span> <span style={{ color: 'var(--tertiary)' }}>true</span>{'\n'}
+              {'  '}<span style={{ color: 'var(--on-surface)' }}>humanFirst:</span> <span style={{ color: 'var(--tertiary)' }}>true</span>{'\n'}
               &#125;;
             </pre>
+          </div>
+
+          {/* Quick PDF CV Access */}
+          <div style={{ marginTop: '1.25rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.75rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+            <span style={{ fontSize: '0.8125rem', color: 'var(--muted-body)' }}>
+              ¿Prefieres examinar mi hoja de vida y certificaciones en formato clásico?
+            </span>
+            <a
+              href={profile.cvPdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary btn-cv-prominent"
+              style={{ padding: '0.5rem 1rem', fontSize: '0.8125rem', display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}
+              title="Abrir Curriculum Vitae en PDF"
+            >
+              <FileText size={15} color="var(--primary)" />
+              <span>Ver CV (PDF)</span>
+              <ArrowUpRight size={13} style={{ opacity: 0.7 }} />
+            </a>
           </div>
         </div>
 
@@ -87,7 +111,7 @@ export const About: React.FC = () => {
             </h3>
 
             <p style={{ fontSize: '0.875rem', lineHeight: 1.6, color: 'var(--muted-body)' }}>
-              Cuando no estoy puliendo interfaces pixel-perfect o conectando APIs, me encontrarás compitiendo en el campo de fútbol 7 o explorando rutas en la naturaleza; el equilibrio perfecto para mantener el código limpio y la creatividad a tope.
+              Cuando no estoy puliendo interfaces pixel-perfect o blindando arquitecturas, me encontrarás jugando al fútbol, practicando deportes o explorando rutas en la naturaleza; el equilibrio perfecto para mantener la mente despejada y la creatividad al máximo nivel.
             </p>
           </div>
 

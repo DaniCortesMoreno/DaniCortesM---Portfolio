@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { skills, Skill } from '../data/skills.ts';
+import { ShieldCheck } from 'lucide-react';
 
 export const Skills: React.FC = () => {
-  const [filter, setFilter] = useState<'all' | 'frontend' | 'backend' | 'devops' | 'design'>('all');
+  const [filter, setFilter] = useState<'all' | 'frontend' | 'backend' | 'security' | 'devops' | 'design'>('all');
 
   const filteredSkills = filter === 'all' 
     ? skills 
@@ -18,7 +19,7 @@ export const Skills: React.FC = () => {
 
         {/* Category Filters */}
         <div className="filter-pill-group">
-          {(['all', 'frontend', 'backend', 'devops', 'design'] as const).map((cat) => (
+          {(['all', 'frontend', 'backend', 'security', 'devops', 'design'] as const).map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
@@ -27,10 +28,21 @@ export const Skills: React.FC = () => {
               {cat === 'all' && 'Todos'}
               {cat === 'frontend' && 'Frontend'}
               {cat === 'backend' && 'Backend'}
+              {cat === 'security' && '🛡️ Ciberseguridad'}
               {cat === 'devops' && 'DevOps / SysAdmin'}
               {cat === 'design' && 'Diseño & Auditoría'}
             </button>
           ))}
+        </div>
+      </div>
+
+      {/* Official Cybersecurity Guarantee Callout */}
+      <div className="security-cert-banner">
+        <div className="security-icon-box">
+          <ShieldCheck size={20} color="var(--tertiary)" />
+        </div>
+        <div className="security-text">
+          <strong>Certificación Oficial en Ciberseguridad:</strong> Cuento con título oficial de especialización en Ciberseguridad. Tu página web siempre contará con las mayores garantías de protección, cifrado SSL/TLS, cabeceras seguras, mitigación OWASP y código blindado frente a vulnerabilidades.
         </div>
       </div>
 
@@ -55,7 +67,7 @@ export const Skills: React.FC = () => {
           display: flex;
           flex-direction: column;
           gap: 1.25rem;
-          margin-bottom: 2rem;
+          margin-bottom: 1.5rem;
         }
         @media (min-width: 768px) {
           .skills-header {
@@ -89,6 +101,40 @@ export const Skills: React.FC = () => {
           border-color: rgba(192, 193, 255, 0.4);
           box-shadow: 0 0 10px rgba(192, 193, 255, 0.15);
         }
+
+        /* Security Banner */
+        .security-cert-banner {
+          display: flex;
+          align-items: center;
+          gap: 0.85rem;
+          padding: 0.85rem 1.15rem;
+          margin-bottom: 1.5rem;
+          background: linear-gradient(135deg, rgba(76, 215, 246, 0.08) 0%, rgba(192, 193, 255, 0.04) 100%);
+          border: 1px solid rgba(76, 215, 246, 0.25);
+          border-radius: var(--radius-sm);
+          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+        }
+        .security-icon-box {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: rgba(76, 215, 246, 0.12);
+          border: 1px solid rgba(76, 215, 246, 0.3);
+          flex-shrink: 0;
+        }
+        .security-text {
+          font-size: 0.84rem;
+          line-height: 1.5;
+          color: var(--on-surface);
+        }
+        .security-text strong {
+          color: var(--tertiary);
+          margin-right: 0.35rem;
+        }
+
         .skills-grid {
           display: grid;
           grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -101,7 +147,7 @@ export const Skills: React.FC = () => {
         }
         @media (min-width: 1024px) {
           .skills-grid {
-            grid-template-columns: repeat(5, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
           }
         }
         .skill-card {
