@@ -1,7 +1,7 @@
 export const profile = {
   name: 'Dani Cortés Moreno',
   title: 'Full-Stack Developer & UI/UX Designer',
-  tagline: 'Construyo soluciones digitales robustas, accesibles y optimizadas para el rendimiento. Fusionando estética specular, arquitectura de datos sólida y velocidad dev-tools.',
+  tagline: 'Diseño y desarrollo páginas web modernas, rápidas y atractivas que impulsan negocios. Fusionando diseño visual de alto impacto, funcionamiento impecable en móviles y máxima velocidad de carga.',
   location: 'Alcoy, Alicante (Desplazamiento presencial a cualquier lugar)',
   availability: 'Disponible para proyectos',
   availabilityBadge: 'DISPONIBLE PARA NUEVOS PROYECTOS / FREELANCE',
@@ -17,22 +17,22 @@ export const profile = {
   },
   metrics: [
     {
-      title: 'TELEMETRY // EXP',
-      icon: 'timer',
-      value: '+6 Años',
-      description: 'Creando productos web de alta fidelidad'
+      title: 'DESARROLLO // ENFOQUE',
+      icon: 'code',
+      value: '100% a Medida',
+      description: 'Diseño exclusivo y código propio, sin plantillas lentas'
     },
     {
-      title: 'PERFORMANCE AUDIT',
+      title: 'VELOCIDAD // AUDIT',
       icon: 'speed',
-      value: '100% Core',
-      description: 'Core Web Vitals & Accessibility focus'
+      value: '100% Rápido',
+      description: 'Carga instantánea en móviles y Google'
     },
     {
-      title: 'RUNTIME MATRIX',
+      title: 'SEGURIDAD // CÓDIGO',
       icon: 'memory',
-      value: 'Performant',
-      description: 'Stack moderno, TypeScript & Edge Deploy'
+      value: 'Garantizada',
+      description: 'Webs seguras con titulación oficial en Ciberseguridad'
     }
   ],
   offlineLifestyle: [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { profile } from '../data/profile.ts';
-import { ArrowDown, ArrowUpRight, Timer, Gauge, Cpu, FileText } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Gauge, Cpu, FileText, Code2 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
@@ -90,29 +90,29 @@ export const Hero: React.FC = () => {
       <div className="telemetry-grid">
         <div className="spotlight-card specular-border telemetry-card">
           <div className="telemetry-top">
-            <span className="telemetry-label">TELEMETRY // EXP</span>
-            <Timer size={16} color="var(--primary)" />
+            <span className="telemetry-label">DESARROLLO // ENFOQUE</span>
+            <Code2 size={16} color="var(--primary)" />
           </div>
-          <div className="telemetry-value">+6 Años</div>
-          <p className="telemetry-desc">Creando productos web de alta fidelidad</p>
+          <div className="telemetry-value">100% a Medida</div>
+          <p className="telemetry-desc">Diseño exclusivo y código propio, sin plantillas lentas</p>
         </div>
 
         <div className="spotlight-card specular-border telemetry-card">
           <div className="telemetry-top">
-            <span className="telemetry-label">PERFORMANCE AUDIT</span>
+            <span className="telemetry-label">VELOCIDAD // AUDIT</span>
             <Gauge size={16} color="var(--tertiary)" />
           </div>
-          <div className="telemetry-value" style={{ color: 'var(--tertiary)' }}>100% Core</div>
-          <p className="telemetry-desc">Core Web Vitals &amp; Accessibility focus</p>
+          <div className="telemetry-value" style={{ color: 'var(--tertiary)' }}>100% Rápido</div>
+          <p className="telemetry-desc">Carga instantánea en móviles y Google</p>
         </div>
 
         <div className="spotlight-card specular-border telemetry-card">
           <div className="telemetry-top">
-            <span className="telemetry-label">RUNTIME MATRIX</span>
+            <span className="telemetry-label">SEGURIDAD // CÓDIGO</span>
             <Cpu size={16} color="var(--secondary)" />
           </div>
-          <div className="telemetry-value">Performant</div>
-          <p className="telemetry-desc">Stack moderno, TypeScript &amp; Edge Deploy</p>
+          <div className="telemetry-value">Garantizada</div>
+          <p className="telemetry-desc">Webs seguras con titulación oficial en Ciberseguridad</p>
         </div>
       </div>
 

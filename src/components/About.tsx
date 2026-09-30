@@ -7,10 +7,11 @@ export const About: React.FC = () => {
 
   const codeSnippet = `export const developerProfile = {
   name: 'Dani Cortés Moreno',
-  location: 'Alcoy, Alicante (ES)',
-  coreValues: ['Surgical Precision', 'Zero Jitter', 'Sub-100ms Latency'],
+  location: 'Alcoy & Desplazamiento Presencial',
+  cybersecurity: 'Certificación Oficial',
+  coreValues: ['Trato Presencial & Físico', 'Seguimiento en tu Negocio', 'Carga Instantánea'],
   craftsmanship: Infinity,
-  readyForProduction: true
+  humanFirst: true
 };`;
 
   const handleCopyCode = () => {
@@ -23,7 +24,7 @@ export const About: React.FC = () => {
     <section id="about" style={{ paddingTop: '3rem', paddingBottom: '3rem' }}>
       <div style={{ marginBottom: '1.75rem' }}>
         <span className="section-eyebrow">// 01. SOBRE MÍ</span>
-        <h2 className="section-title">Arquitectura limpia y diseño intencional</h2>
+        <h2 className="section-title">Diseño intencional, código limpio y compromiso presencial</h2>
       </div>
 
       <div className="about-bento-grid">
@@ -71,7 +72,7 @@ export const About: React.FC = () => {
               {'  '}<span style={{ color: 'var(--on-surface)' }}>name:</span> <span style={{ color: 'var(--primary)' }}>'{profile.name}'</span>,{'\n'}
               {'  '}<span style={{ color: 'var(--on-surface)' }}>location:</span> <span style={{ color: 'var(--primary)' }}>'Alcoy &amp; Desplazamiento Presencial'</span>,{'\n'}
               {'  '}<span style={{ color: 'var(--on-surface)' }}>cybersecurity:</span> <span style={{ color: 'var(--tertiary)' }}>'Certificación Oficial'</span>,{'\n'}
-              {'  '}<span style={{ color: 'var(--on-surface)' }}>coreValues:</span> [<span style={{ color: 'var(--primary)' }}>'Trato Presencial &amp; Físico'</span>, <span style={{ color: 'var(--primary)' }}>'Seguimiento en tu Empresa'</span>, <span style={{ color: 'var(--primary)' }}>'Zero Jitter'</span>],{'\n'}
+              {'  '}<span style={{ color: 'var(--on-surface)' }}>coreValues:</span> [<span style={{ color: 'var(--primary)' }}>'Trato Presencial &amp; Físico'</span>, <span style={{ color: 'var(--primary)' }}>'Seguimiento en tu Negocio'</span>, <span style={{ color: 'var(--primary)' }}>'Carga Instantánea'</span>],{'\n'}
               {'  '}<span style={{ color: 'var(--on-surface)' }}>craftsmanship:</span> <span style={{ color: 'var(--secondary)' }}>Infinity</span>,{'\n'}
               {'  '}<span style={{ color: 'var(--on-surface)' }}>humanFirst:</span> <span style={{ color: 'var(--tertiary)' }}>true</span>{'\n'}
               &#125;;
@@ -103,7 +104,7 @@ export const About: React.FC = () => {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--dimmed-meta)', fontFamily: 'var(--font-mono)', fontSize: '0.6875rem' }}>
               <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: 'var(--tertiary)' }}></span>
-              OFFLINE TELEMETRY
+              VIDA PERSONAL // BALANCE
             </div>
 
             <h3 style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--on-surface)', margin: 0 }}>

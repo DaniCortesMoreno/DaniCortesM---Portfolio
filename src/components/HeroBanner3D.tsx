@@ -14,32 +14,32 @@ interface KeyPortfolioCard {
 const PORTFOLIO_KEYS_DATA: Record<number, KeyPortfolioCard> = {
   1: {
     id: 1,
-    keyLabel: 'SWITCH [01] // PROYECTOS & ARQUITECTURA',
-    badge: 'CASOS DE ÉXITO & FULL-STACK',
-    title: 'Sistemas & Aplicaciones Web Escalables',
+    keyLabel: 'TECLA [01] // PROYECTOS & DISEÑO',
+    badge: 'CASOS REALES & WEBS EN PRODUCCIÓN',
+    title: 'Páginas Web y Soluciones a Medida',
     description:
-      'Diseño y desarrollo plataformas completas con código limpio, microservicios y sistemas reactivos de alto rendimiento donde cada milisegundo cuenta.',
-    linkText: 'Explorar Proyectos',
+      'Diseño y desarrollo páginas web modernas, tiendas online y plataformas rápidas pensadas para impulsar negocios y cautivar clientes desde el primer segundo.',
+    linkText: 'Explorar Trabajos Realizados',
     linkTarget: '#projects'
   },
   2: {
     id: 2,
-    keyLabel: 'SWITCH [02] // STACK TECNOLÓGICO',
-    badge: 'CORE CAPABILITIES & PATRONES',
-    title: 'Ingeniería Full-Stack & Rendimiento',
+    keyLabel: 'TECLA [02] // TECNOLOGÍA & SEGURIDAD',
+    badge: 'CIBERSEGURIDAD OFICIAL & MÁXIMA VELOCIDAD',
+    title: 'Desarrollo Web & Blindaje de Seguridad',
     description:
-      'Dominio especializado en React, TypeScript, Python, Node.js y arquitecturas Cloud. Interfaces hiperfluidas con cero latencia y robustez técnica.',
-    linkText: 'Ver Experiencia & Stack',
-    linkTarget: '#experience'
+      'Tecnologías líderes (React, WordPress, PHP y TypeScript) con certificación oficial en Ciberseguridad. Tu web cargará al instante y estará protegida contra cualquier amenaza.',
+    linkText: 'Ver Habilidades & Seguridad',
+    linkTarget: '#skills'
   },
   3: {
     id: 3,
-    keyLabel: 'SWITCH [03] // CONTACTO & ALIANZAS',
-    badge: 'DISPONIBILIDAD INMEDIATA',
-    title: '¿Tienes un reto o proyecto ambicioso?',
+    keyLabel: 'TECLA [03] // CONTACTO & TRATO DIRECTO',
+    badge: 'COMPROMISO PRESENCIAL',
+    title: '¿Hablamos sobre tu proyecto o negocio?',
     description:
-      'Abierto a roles de ingeniería senior, consultoría técnica y colaboraciones estratégicas. Hablemos y llevemos tu visión al siguiente nivel.',
-    linkText: 'Iniciar Conversación',
+      'Disponible para empresas, negocios locales y agencias. Me desplazo en persona a tu local para conocerte o coordinamos por WhatsApp o llamada telefónica.',
+    linkText: 'Contactar Directamente',
     linkTarget: '#contact'
   }
 };
@@ -159,8 +159,9 @@ export const HeroBanner3D: React.FC = () => {
     };
     window.addEventListener('resize', handleResize);
 
-    // Particle setup
-    const particleCount = 45;
+    // Particle setup: Lightweight on mobile devices to preserve CPU budget
+    const isMobile = window.innerWidth < 768;
+    const particleCount = isMobile ? 14 : 36;
     const particles = Array.from({ length: particleCount }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
@@ -199,8 +200,10 @@ export const HeroBanner3D: React.FC = () => {
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fillStyle = p.color;
         ctx.globalAlpha = Math.max(0.1, Math.min(0.9, p.opacity));
-        ctx.shadowBlur = p.size * 3;
-        ctx.shadowColor = p.color;
+        if (!isMobile) {
+          ctx.shadowBlur = p.size * 2;
+          ctx.shadowColor = p.color;
+        }
         ctx.fill();
         ctx.globalAlpha = 1;
       });
@@ -253,9 +256,13 @@ export const HeroBanner3D: React.FC = () => {
       animationFrameId = requestAnimationFrame(render);
     };
 
-    render();
+    // Defer start slightly so initial FCP and LCP render without CPU contention
+    const startTimer = setTimeout(() => {
+      animationFrameId = requestAnimationFrame(render);
+    }, 70);
 
     return () => {
+      clearTimeout(startTimer);
       window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationFrameId);
     };
@@ -386,11 +393,11 @@ export const HeroBanner3D: React.FC = () => {
         >
           {/* Volumetric Extrusion Stack (Pseudo-3D bevel to kill the paper-thin look) */}
           <div className="keyboard-depth-stack" aria-hidden="true">
-            <img src="/keyboard.png" alt="" className="keyboard-slice slice-5" draggable={false} />
-            <img src="/keyboard.png" alt="" className="keyboard-slice slice-4" draggable={false} />
-            <img src="/keyboard.png" alt="" className="keyboard-slice slice-3" draggable={false} />
-            <img src="/keyboard.png" alt="" className="keyboard-slice slice-2" draggable={false} />
-            <img src="/keyboard.png" alt="" className="keyboard-slice slice-1" draggable={false} />
+            <img src="/keyboard.webp" alt="" width="640" height="380" className="keyboard-slice slice-5" draggable={false} />
+            <img src="/keyboard.webp" alt="" width="640" height="380" className="keyboard-slice slice-4" draggable={false} />
+            <img src="/keyboard.webp" alt="" width="640" height="380" className="keyboard-slice slice-3" draggable={false} />
+            <img src="/keyboard.webp" alt="" width="640" height="380" className="keyboard-slice slice-2" draggable={false} />
+            <img src="/keyboard.webp" alt="" width="640" height="380" className="keyboard-slice slice-1" draggable={false} />
           </div>
 
           {/* Ambient Purple Underglow LED Emitter */}
@@ -398,8 +405,12 @@ export const HeroBanner3D: React.FC = () => {
 
           {/* Front Keyboard Body Face */}
           <img
-            src="/keyboard.png"
+            src="/keyboard.webp"
             alt="Mechanical Macropad Artisanal Keyboard"
+            width="640"
+            height="380"
+            // @ts-expect-error fetchPriority attribute
+            fetchpriority="high"
             className="banner-keyboard-img"
             draggable={false}
           />
@@ -515,10 +526,10 @@ export const HeroBanner3D: React.FC = () => {
       {/* Bottom Slogan & Identity Typography */}
       <div className="banner-bottom-text">
         <p className="banner-subtext">
-          PRECISIÓN ARTESANAL &amp; ARQUITECTURA LIMPIA.
+          DISEÑO WEB PROFESIONAL &amp; CÓDIGO A MEDIDA
         </p>
         <h3 className="banner-main-slogan font-display">
-          ZERO LATENCY.
+          MÁXIMO RENDIMIENTO.
         </h3>
 
         {/* Scroll cue button */}
@@ -526,6 +537,11 @@ export const HeroBanner3D: React.FC = () => {
           <span>EXPLORAR PORTFOLIO</span>
           <ChevronDown size={14} className="scroll-chevron-icon" />
         </a>
+      </div>
+
+      {/* Atmospheric Horizon Gradient Fade into Main Page */}
+      <div className="hero-banner-bottom-fade" aria-hidden="true">
+        <div className="hero-specular-horizon-line" />
       </div>
 
       {/* Embedded High-End Styles */}
@@ -539,7 +555,11 @@ export const HeroBanner3D: React.FC = () => {
           max-height: var(--exact-vh, 100dvh);
           overflow: hidden;
           overflow-x: hidden;
-          background: radial-gradient(circle at 50% 45%, #181722 0%, #0c0b11 50%, #07070a 100%);
+          background: 
+            radial-gradient(circle, rgba(192, 193, 255, 0.05) 1px, transparent 1px),
+            radial-gradient(circle at 50% 45%, #181722 0%, #0c0b11 50%, #07070a 100%);
+          background-size: 36px 36px, 100% 100%;
+          background-position: center center, center center;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -724,8 +744,8 @@ export const HeroBanner3D: React.FC = () => {
           z-index: 10;
           transform: translateZ(3px);
           mix-blend-mode: color-dodge;
-          mask-image: url('/keyboard.png');
-          -webkit-mask-image: url('/keyboard.png');
+          mask-image: url('/keyboard.webp');
+          -webkit-mask-image: url('/keyboard.webp');
           mask-size: contain;
           -webkit-mask-size: contain;
           mask-repeat: no-repeat;
@@ -1102,6 +1122,27 @@ export const HeroBanner3D: React.FC = () => {
           0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
           40% { transform: translateY(4px); }
           60% { transform: translateY(2px); }
+        }
+
+        /* Atmospheric Horizon Transition into Main Canvas */
+        .hero-banner-bottom-fade {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 180px;
+          background: linear-gradient(to bottom, transparent 0%, rgba(7, 7, 10, 0.7) 65%, #07070a 100%);
+          pointer-events: none;
+          z-index: 6;
+          display: flex;
+          align-items: flex-end;
+        }
+
+        .hero-specular-horizon-line {
+          width: 100%;
+          height: 1px;
+          background: linear-gradient(90deg, transparent 5%, rgba(76, 215, 246, 0.25) 30%, rgba(192, 193, 255, 0.35) 50%, rgba(168, 85, 247, 0.25) 70%, transparent 95%);
+          box-shadow: 0 0 12px rgba(76, 215, 246, 0.2);
         }
 
         /* Mobile Specific (<768px) Perfect Alignment & Safe Area */

@@ -39,14 +39,21 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
     },
     {
       id: 'nav-about',
-      title: 'Ir a Sobre Mí & Manifiesto',
+      title: 'Ir a Sobre Mí (Diseño & Presencia)',
       category: 'Navegación',
       icon: <Hash size={15} color="var(--primary)" />,
       run: () => { window.location.hash = 'about'; onClose(); }
     },
     {
+      id: 'nav-manifesto',
+      title: 'Ir a 4 Pilares de Trabajo (Manifiesto)',
+      category: 'Navegación',
+      icon: <Hash size={15} color="var(--primary)" />,
+      run: () => { window.location.hash = 'manifesto'; onClose(); }
+    },
+    {
       id: 'nav-skills',
-      title: 'Ir a Arsenal Tecnológico',
+      title: 'Ir a Habilidades & Tecnologías',
       category: 'Navegación',
       icon: <Hash size={15} color="var(--primary)" />,
       run: () => { window.location.hash = 'skills'; onClose(); }
@@ -60,14 +67,14 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({
     },
     {
       id: 'nav-projects',
-      title: 'Ir a Proyectos & Casos de Estudio',
+      title: 'Ir a Proyectos & Casos de Éxito',
       category: 'Navegación',
       icon: <Hash size={15} color="var(--primary)" />,
       run: () => { window.location.hash = 'projects'; onClose(); }
     },
     {
       id: 'nav-contact',
-      title: 'Ir a Conexión & Contacto',
+      title: 'Ir a Contacto Directo',
       category: 'Navegación',
       icon: <Hash size={15} color="var(--primary)" />,
       run: () => { window.location.hash = 'contact'; onClose(); }

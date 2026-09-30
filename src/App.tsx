@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import './styles/global.css';
 import './styles/components.css';
 import { useSpotlight } from './hooks/useSpotlight.ts';
@@ -8,12 +8,15 @@ import { Hero } from './components/Hero.tsx';
 import { About } from './components/About.tsx';
 import { Skills } from './components/Skills.tsx';
 import { Experience } from './components/Experience.tsx';
-import { Projects } from './components/Projects.tsx';
-import { Contact } from './components/Contact.tsx';
 import { Footer } from './components/Footer.tsx';
-import { WhatsAppWidget } from './components/WhatsAppWidget.tsx';
-import { CommandPalette } from './components/CommandPalette.tsx';
-import { TerminalModal } from './components/TerminalModal.tsx';
+
+// Code-splitting para componentes pesados y bajo el pliegue (Reducción masiva de TBT y LCP)
+const ManifestoInteractive = lazy(() => import('./components/ManifestoInteractive.tsx').then(m => ({ default: m.ManifestoInteractive })));
+const Projects = lazy(() => import('./components/Projects.tsx').then(m => ({ default: m.Projects })));
+const Contact = lazy(() => import('./components/Contact.tsx').then(m => ({ default: m.Contact })));
+const WhatsAppWidget = lazy(() => import('./components/WhatsAppWidget.tsx').then(m => ({ default: m.WhatsAppWidget })));
+const CommandPalette = lazy(() => import('./components/CommandPalette.tsx').then(m => ({ default: m.CommandPalette })));
+const TerminalModal = lazy(() => import('./components/TerminalModal.tsx').then(m => ({ default: m.TerminalModal })));
 
 export const App: React.FC = () => {
   // Activate dynamic cursor spotlight tracking
@@ -41,32 +44,61 @@ export const App: React.FC = () => {
       <HeroBanner3D />
 
       {/* Main Content Layout */}
-      <main className="site-container" style={{ position: 'relative', zIndex: 10 }}>
-        <Hero />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
+      <main style={{ position: 'relative', zIndex: 10 }}>
+        <div className="site-container">
+          <Hero />
+          <About />
+        </div>
+
+        {/* 100% Width & 100% Height Scroll Pinned Interactive Section */}
+        <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
+          <ManifestoInteractive />
+        </Suspense>
+
+        <div className="site-container">
+          <Skills />
+          <Experience />
+        </div>
+
+        {/* 100% Screen Width Showcase for Projects */}
+        <Suspense fallback={<div style={{ minHeight: '400px' }} />}>
+          <Projects />
+        </Suspense>
+
+        <div className="site-container">
+          <Suspense fallback={<div style={{ minHeight: '300px' }} />}>
+            <Contact />
+          </Suspense>
+        </div>
       </main>
 
       {/* Footer */}
       <Footer />
 
       {/* Floating Tactical Widgets */}
-      <WhatsAppWidget />
+      <Suspense fallback={null}>
+        <WhatsAppWidget />
+      </Suspense>
 
       {/* Modals & Command Overlays */}
-      <CommandPalette
-        isOpen={isKBarOpen}
-        onClose={() => setIsKBarOpen(false)}
-        onOpenTerminal={() => setIsTerminalOpen(true)}
-      />
+      <Suspense fallback={null}>
+        {isKBarOpen && (
+          <CommandPalette
+            isOpen={isKBarOpen}
+            onClose={() => setIsKBarOpen(false)}
+            onOpenTerminal={() => setIsTerminalOpen(true)}
+          />
+        )}
+      </Suspense>
 
-      <TerminalModal
-        isOpen={isTerminalOpen}
-        onClose={() => setIsTerminalOpen(false)}
-      />
+      <Suspense fallback={null}>
+        {isTerminalOpen && (
+          <TerminalModal
+            isOpen={isTerminalOpen}
+            onClose={() => setIsTerminalOpen(false)}
+          />
+        )}
+      </Suspense>
     </div>
   );
 };

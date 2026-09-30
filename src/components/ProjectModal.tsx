@@ -58,7 +58,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
                 <span style={{ color: 'var(--tertiary)', fontSize: '0.625rem' }}>SSL 🔒</span>
               </div>
               <div style={{ height: '180px', overflow: 'hidden', position: 'relative' }}>
-                <img src={project.image} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
+                <img src={project.image} alt={project.title} width="560" height="320" loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
               </div>
             </div>
 

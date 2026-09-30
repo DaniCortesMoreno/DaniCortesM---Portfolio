@@ -12,6 +12,7 @@ node_modules
 dist
 dist-ssr
 *.local
+*.zip
 
 # Environment variables
 .env
@@ -20,6 +21,10 @@ dist-ssr
 .env.test.local
 .env.production.local
 !.env.example
+contact-config.php
+public/contact-config.php
+*.env.php
+
 
 # Editor directories and files
 .vscode/*

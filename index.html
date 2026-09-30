@@ -13,15 +13,21 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Dani Cortés Moreno — Full-Stack Developer &amp; UI/UX Designer" />
     <meta property="og:description" content="Desarrollador Full-Stack y Diseñador UI/UX especializado en interfaces táctiles de alta velocidad y arquitecturas web robustas." />
-    <meta property="og:image" content="/screen.png" />
+    <meta property="og:image" content="/screen.webp" />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <!-- Google Fonts: Geist, Inter, JetBrains Mono -->
+    <!-- Preload Critical LCP Hero Image -->
+    <link rel="preload" as="image" href="/keyboard.webp" type="image/webp" fetchpriority="high" />
+
+    <!-- Prefetch CV in background so opening it is instantaneous -->
+    <link rel="prefetch" href="/Daniel_Cortes_Moreno_CV.pdf" as="document" />
+
+    <!-- Google Fonts Optimization: DNS Prefetch + Preconnect + Display Swap -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-    <!-- Material Symbols Outlined -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" />
   </head>
   <body>
     <div id="root"></div>

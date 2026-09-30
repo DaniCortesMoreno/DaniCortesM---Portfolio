@@ -2,6 +2,11 @@ import { useEffect } from 'react';
 
 export function useSpotlight() {
   useEffect(() => {
+    // Only track on precision pointing devices (mouse), skip on touch/mobile
+    if (typeof window === 'undefined' || !window.matchMedia('(pointer: fine)').matches) {
+      return;
+    }
+
     const handleMouseMove = (e: MouseEvent) => {
       const cards = document.querySelectorAll<HTMLElement>('.spotlight-card');
       cards.forEach((card) => {

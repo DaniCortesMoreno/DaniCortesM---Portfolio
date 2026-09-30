@@ -40,7 +40,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal, onOpenKBar }) =>
         <nav style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }} className="desktop-nav">
           <a href="#hero" className="nav-link active">Inicio</a>
           <a href="#about" className="nav-link">Sobre Mí</a>
-          <a href="#skills" className="nav-link">Skills</a>
+          <a href="#manifesto" className="nav-link">Manifiesto</a>
+          <a href="#skills" className="nav-link">Habilidades</a>
           <a href="#experience" className="nav-link">Trayectoria</a>
           <a href="#projects" className="nav-link">Proyectos</a>
           <a href="#contact" className="nav-link">Contacto</a>
@@ -102,7 +103,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTerminal, onOpenKBar }) =>
         <div className="mobile-drawer">
           <a href="#hero" onClick={() => setMobileMenuOpen(false)}>Inicio</a>
           <a href="#about" onClick={() => setMobileMenuOpen(false)}>Sobre Mí</a>
-          <a href="#skills" onClick={() => setMobileMenuOpen(false)}>Skills</a>
+          <a href="#manifesto" onClick={() => setMobileMenuOpen(false)}>Manifiesto</a>
+          <a href="#skills" onClick={() => setMobileMenuOpen(false)}>Habilidades</a>
           <a href="#experience" onClick={() => setMobileMenuOpen(false)}>Trayectoria</a>
           <a href="#projects" onClick={() => setMobileMenuOpen(false)}>Proyectos</a>
           <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Contacto</a>

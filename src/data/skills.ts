@@ -19,24 +19,24 @@ export const skills: Skill[] = [
   { name: 'Express.js', category: 'backend', badge: 'Node API', level: 'Avanzado' },
   { name: 'Headless WordPress', category: 'backend', badge: 'REST API', level: 'Avanzado' },
   { name: 'WordPress', category: 'backend', badge: 'Custom', level: 'Experto' },
-  { name: 'WooCommerce', category: 'backend', badge: 'eCommerce', level: 'Experto' },
+  { name: 'WooCommerce', category: 'backend', badge: 'Tiendas Online', level: 'Experto' },
   { name: 'REST APIs & Endpoints', category: 'backend', badge: 'JSON / SPA', level: 'Avanzado' },
   { name: 'SQL / Relational', category: 'backend', badge: 'MySQL', level: 'Avanzado' },
   { name: 'Laravel', category: 'backend', badge: 'PHP 8+', level: 'Avanzado' },
 
   // Security
   { name: 'Ciberseguridad Web', category: 'security', badge: 'Cert. Oficial', level: 'Certificado' },
-  { name: 'Hardening & OWASP', category: 'security', badge: 'Protección', level: 'Avanzado' },
-  { name: 'Auth JWT & Bcrypt', category: 'security', badge: 'Tokens', level: 'Avanzado' },
+  { name: 'Protección contra Hackeos (OWASP)', category: 'security', badge: 'Blindaje', level: 'Avanzado' },
+  { name: 'Sistemas de Usuarios y Contraseñas', category: 'security', badge: 'Cifrado Seguro', level: 'Avanzado' },
 
   // DevOps & Cloud
   { name: 'Git & GitHub', category: 'devops', badge: 'CI/CD', level: 'Avanzado' },
-  { name: 'DNS & SysAdmin', category: 'devops', badge: 'Nginx/Linux', level: 'Avanzado' },
-  { name: 'Hostinger Cloud / Staging', category: 'devops', badge: 'Cloud Deploy', level: 'Avanzado' },
+  { name: 'Gestión de Dominios y Correo', category: 'devops', badge: 'DNS & Linux', level: 'Avanzado' },
+  { name: 'Servidores & Hosting Cloud', category: 'devops', badge: 'Alta Disponibilidad', level: 'Avanzado' },
 
   // Design & Optimization
   { name: 'Figma UI/UX', category: 'design', badge: 'AutoLayout', level: 'Avanzado' },
-  { name: 'Core Web Vitals', category: 'design', badge: '100% Core', level: 'Experto' },
-  { name: 'WCAG Accessibility', category: 'design', badge: 'AAA/AA', level: 'Avanzado' },
-  { name: 'SEO Técnico & Local', category: 'design', badge: 'Posicionamiento', level: 'Avanzado' }
+  { name: 'Velocidad Web (Google Vitals)', category: 'design', badge: 'Carga Inmediata', level: 'Experto' },
+  { name: 'Accesibilidad Web (Fácil Lectura)', category: 'design', badge: 'Apta para Todos', level: 'Avanzado' },
+  { name: 'Posicionamiento en Google (SEO)', category: 'design', badge: 'Más Visibilidad', level: 'Avanzado' }
 ];

@@ -13,8 +13,8 @@ export const Skills: React.FC = () => {
     <section id="skills" style={{ paddingTop: '2.5rem', paddingBottom: '3rem' }}>
       <div className="skills-header">
         <div>
-          <span className="section-eyebrow">// HARDWARE &amp; RUNTIMES</span>
-          <h2 className="section-title">Arsenal Tecnológico Verificado</h2>
+          <span className="section-eyebrow">// 02. HABILIDADES &amp; HERRAMIENTAS</span>
+          <h2 className="section-title">Arsenal Tecnológico: Herramientas y Habilidades</h2>
         </div>
 
         {/* Category Filters */}
@@ -25,12 +25,12 @@ export const Skills: React.FC = () => {
               onClick={() => setFilter(cat)}
               className={`filter-pill ${filter === cat ? 'active' : ''}`}
             >
-              {cat === 'all' && 'Todos'}
-              {cat === 'frontend' && 'Frontend'}
-              {cat === 'backend' && 'Backend'}
-              {cat === 'security' && '🛡️ Ciberseguridad'}
-              {cat === 'devops' && 'DevOps / SysAdmin'}
-              {cat === 'design' && 'Diseño & Auditoría'}
+              {cat === 'all' && 'Todas'}
+              {cat === 'frontend' && 'Diseño & Web (Frontend)'}
+              {cat === 'backend' && 'Servidores & Datos (Backend)'}
+              {cat === 'security' && '🛡️ Ciberseguridad Oficial'}
+              {cat === 'devops' && 'Hosting & Dominios'}
+              {cat === 'design' && 'Diseño UI/UX & Calidad'}
             </button>
           ))}
         </div>
@@ -42,7 +42,7 @@ export const Skills: React.FC = () => {
           <ShieldCheck size={20} color="var(--tertiary)" />
         </div>
         <div className="security-text">
-          <strong>Certificación Oficial en Ciberseguridad:</strong> Cuento con título oficial de especialización en Ciberseguridad. Tu página web siempre contará con las mayores garantías de protección, cifrado SSL/TLS, cabeceras seguras, mitigación OWASP y código blindado frente a vulnerabilidades.
+          <strong>Certificación Oficial en Ciberseguridad:</strong> Cuento con título oficial de especialización en Ciberseguridad. Tu página web siempre contará con las mayores garantías de protección, copias de seguridad continuas, certificados SSL seguros y código blindado frente a posibles caídas o pérdidas de información.
         </div>
       </div>
 
@@ -151,28 +151,61 @@ export const Skills: React.FC = () => {
           }
         }
         .skill-card {
+          position: relative;
           padding: 0.85rem 1rem;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           min-height: 76px;
           border-radius: var(--radius-sm);
-          transition: all var(--transition-fast);
+          cursor: default;
+          transform: translateY(0);
+          transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                      box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                      border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                      background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          will-change: transform, box-shadow;
         }
-        .skill-card:hover .skill-name {
-          color: var(--primary);
+        .skill-card::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          border-radius: inherit;
+          background: linear-gradient(135deg, rgba(192, 193, 255, 0.08) 0%, rgba(76, 215, 246, 0.04) 50%, transparent 100%);
+          opacity: 0;
+          transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+          pointer-events: none;
+        }
+        .skill-card:hover {
+          transform: translateY(-4px) scale(1.015);
+          border-color: rgba(192, 193, 255, 0.42);
+          background-color: rgba(35, 34, 40, 0.85);
+          box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.6),
+                      0 0 18px rgba(192, 193, 255, 0.12),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }
+        .skill-card:hover::after {
+          opacity: 1;
         }
         .skill-name {
           font-family: var(--font-mono);
           font-size: 0.8125rem;
           font-weight: 500;
           color: var(--on-surface);
-          transition: color var(--transition-fast);
+          transition: color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .skill-card:hover .skill-name {
+          color: var(--primary);
+          transform: translateX(2px);
         }
         .skill-badge {
           font-family: var(--font-mono);
           font-size: 0.625rem;
           color: var(--dimmed-meta);
+          transition: color 0.3s ease, opacity 0.3s ease;
+        }
+        .skill-card:hover .skill-badge {
+          color: var(--on-surface-variant);
         }
         .skill-footer {
           display: flex;
@@ -183,13 +216,23 @@ export const Skills: React.FC = () => {
         .skill-level {
           font-size: 0.6875rem;
           color: var(--dimmed-meta);
+          transition: color 0.3s ease;
+        }
+        .skill-card:hover .skill-level {
+          color: var(--on-surface-variant);
         }
         .skill-indicator {
-          width: 4px;
-          height: 4px;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
           background-color: var(--tertiary);
           box-shadow: 0 0 6px var(--tertiary);
+          transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                      box-shadow 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .skill-card:hover .skill-indicator {
+          transform: scale(1.4);
+          box-shadow: 0 0 10px 2px var(--tertiary);
         }
       `}</style>
     </section>
